@@ -2,6 +2,8 @@ import {Route, Routes, BrowserRouter} from "react-router-dom";
 import Footer from "./Footer";
 import Header from "./Header";
 import Home from "./page/Home";
+import './../Style.css';
+
 
 export default function Base() {
     return (

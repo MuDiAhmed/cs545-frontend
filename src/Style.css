@@ -1,0 +1,16 @@
+body{
+    background-color: beige;
+}
+
+.container {
+    width: 300px;
+    margin: auto;
+    border: 3px solid blue;
+    border-radius: 3px;
+  }
+
+.dashboard--pro {
+    width: 400px;
+    margin:auto;
+    background-color:beige;
+}
