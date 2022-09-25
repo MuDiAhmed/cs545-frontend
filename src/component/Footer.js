@@ -1,8 +1,14 @@
-
+import React from 'react';
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import './../Style.css';
 export default function Footer() {
     return (
-        <div style={{border:"3px solid #4169E1", marginTop:"10px", marginLeft:"190px", marginRight:"190px" }}>
-            Property Managment Portal 
-        </div>
+        <Navbar className="AdminFooterPanel">
+        <Container>
+             <Navbar.Brand style={{color:"white"}}>All rights Reserved - Follow us on: </Navbar.Brand>
+             <Navbar.Toggle />
+       </Container>
+       </Navbar>
     );
 }
