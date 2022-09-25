@@ -1,47 +1,28 @@
-import Carousel from 'react-bootstrap/Carousel';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
-function AdminDashBoardProperties() {
+function AdminCards() {
+ const values = ["abc","def","ghi","jkl","mno","pqr","stu"]
   return (
-    <Carousel>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2014/08/11/21/39/wall-416060_1280.jpg"
-          alt="Second slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100"
-          src="https://cdn.pixabay.com/photo/2016/11/18/17/20/living-room-1835923_1280.jpg"
-          alt="Third slide"
-        />
-
-        <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
-        </Carousel.Caption>
-      </Carousel.Item>
-    </Carousel>
+    <Row xs={1} md={5} className="g-4">
+      {Array.from({ length: 10 }).map((_, idx) => (
+        <Col>
+          <Card>
+            <Card.Img variant="top" src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
+            <Card.Body>
+              <Card.Title style={{fontSize:"15px"}}>Card title</Card.Title>
+              <Card.Text style={{fontSize:"12px"}}>
+                This is a longer card with supporting text below as a natural
+                lead-in to additional content. This content is a little bit
+                longer. {values[2]}
+              </Card.Text>
+            </Card.Body>
+          </Card>
+        </Col>
+      ))}
+    </Row>
   );
 }
 
-export default AdminDashBoardProperties;
+export default AdminCards;

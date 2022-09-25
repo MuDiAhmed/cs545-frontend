@@ -3,11 +3,11 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import AdminDashBoard from './AdminDashBoard';
-import Cards from './Cards';
+import "./../Style.css"
 
 // import Sonnet from '../../components/Sonnet';
 
-function LeftPannel() {
+function AdminLeftPanel() {
   return (
     <Tab.Container id="left-tabs-example" defaultActiveKey="first">
       <Row>
@@ -17,10 +17,10 @@ function LeftPannel() {
               <Nav.Link eventKey="dashboard">Dashboard</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="second">Profile</Nav.Link>
+              <Nav.Link eventKey="properties">Properties</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="third">Properties</Nav.Link>
+              <Nav.Link eventKey="third">Profile</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="fourth">Owners</Nav.Link>
@@ -35,13 +35,10 @@ function LeftPannel() {
             <Tab.Pane eventKey="dashboard">
             <AdminDashBoard />
             </Tab.Pane>
-            <Tab.Pane eventKey="second">
-              <div>Properties</div>
+            <Tab.Pane eventKey="properties">
+            
             </Tab.Pane>
             <Tab.Pane eventKey="third">
-            <Cards />
-            <Cards />
-            <Cards />
             </Tab.Pane>
             <Tab.Pane eventKey="fourth">
 
@@ -56,4 +53,4 @@ function LeftPannel() {
   );
 }
 
-export default LeftPannel;
+export default AdminLeftPanel;

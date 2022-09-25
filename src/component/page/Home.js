@@ -1,10 +1,10 @@
 import React from 'react';
-import LeftPanel from './../LeftPanel';
+import LeftPanel from '../AdminLeftPanel';
 
 export default function Home(){
     return (
         <div className="container">
-            <p></p>
+            <hr />
             <LeftPanel />
         </div>
     )
