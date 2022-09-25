@@ -1,7 +1,11 @@
-export default function (){
+import React from 'react';
+import LeftPanel from '../AdminLeftPanel';
+
+export default function Home(){
     return (
-        <div>
-            Home
+        <div className="container">
+            <hr />
+            <LeftPanel />
         </div>
     )
 }
