@@ -1,8 +1,7 @@
 import React from 'react';
-//import AdminDashBoardProperties from './AdminDashBoardProperties';
-import AdminDashBoardCustomers from './AdminDashBoardCustomers';
-import AdminCards from './AdminDashboardProperties'
-export default function AdminDashBoard(){
+import AdminDashBoardCustomers from './DashboardCustomers';
+import AdminCards from './DashboardProperties'
+export default function Dashboard(){
     return(
         <div className=".dashboard--pro">
             

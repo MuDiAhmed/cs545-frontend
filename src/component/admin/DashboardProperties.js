@@ -7,7 +7,7 @@ function AdminCards() {
   return (
     <Row xs={1} md={5} className="g-4">
       {Array.from({ length: 10 }).map((_, idx) => (
-        <Col>
+        <Col key={idx}>
           <Card>
             <Card.Img variant="top" src="https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
             <Card.Body>
