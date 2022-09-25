@@ -9,7 +9,7 @@ import "./../Style.css"
 
 function AdminLeftPanel() {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="first">
+    <Tab.Container id="left-tabs-example" defaultActiveKey="dashboard">
       <Row>
         <Col sm={3}>
           <Nav variant="pills" className="flex-column">
