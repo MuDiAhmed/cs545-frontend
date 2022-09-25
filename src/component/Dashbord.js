@@ -1,9 +1,8 @@
-
 import React from "react";
 import { Route, Routes } from "react-router";
 import SignIn from "./SignIn";
 import { Link } from "react-router-dom";
-import PropertiesDetail from "./PropertyDetail";
+import PropertiesDetail from "./PropertyDetails";
 
 export default function Dashboard() {
   return (
@@ -11,11 +10,13 @@ export default function Dashboard() {
       <p>
         <Link to="/sighin">Sign In</Link>
       </p>
-      <p><Link to='/Property' >Property Details</Link></p>
+      <p>
+        <Link to="/Property">Property Details</Link>
+      </p>
 
       <Routes>
         <Route path="/signin" element={<SignIn />} />
-        <Route path="/Property" element={<PropertiesDetail />} />
+        <Route path="/Property" element={<PropertiesDetail/>} />
       </Routes>
     </div>
   );

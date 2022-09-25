@@ -1,21 +1,23 @@
-import React from "react";
-import { Route, Routes } from "react-router";
-import SignIn from "./SignIn";
-import { Link } from "react-router-dom";
-import PropertiesDetail from "./PropertyDetail";
-
-export default function Dashboard() {
+function PropertyImages() {
   return (
     <div>
-      <p>
-        <Link to="/sighin">Sign In</Link>
-      </p>
-      <p><Link to='/Property' >Property Details</Link></p>
-
-      <Routes>
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/Property" element={<PropertiesDetail />} />
-      </Routes>
+      <img
+        className="img1"
+        src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp"
+        alt="Property1"
+      />
     </div>
   );
 }
+export function BigPropertyImages() {
+  return (
+    <div>
+      <img
+        className="mainImage"
+        src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp"
+        alt="Property1"
+      />
+    </div>
+  );
+}
+export default PropertyImages;

@@ -3,17 +3,18 @@ import axios from "axios";
 import {createSlice} from "@reduxjs/toolkit";
 
 export const fetchProperties = createAsyncThunk("property/fetchAll", async () => {
-    const { data } = await axios.get("properties/")
-    return data;
+    const result= await axios.get("http://localhost:8080/products/1");
+    console.log( 'resultdata', result.data);
+    return result.data;
 })
 
 const propertiesSlice = createSlice({
-    name:"post",
-    initialState: {posts: [], status: ''},
+    name:"property",
+    initialState: {property: {}, status: 'hi'},
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchProperties.fulfilled, (state, action) => {
-            state.properties = action.payload;
+            state.property = action.payload;
             state.status = 'completed'
         });
         builder.addCase(fetchProperties.pending,  (state) => {
