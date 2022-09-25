@@ -2,8 +2,8 @@ import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
+import AdminDashBoard from './AdminDashBoard';
 import Cards from './Cards';
-//import AdminDashBoard from './AdminDashBoard'
 
 // import Sonnet from '../../components/Sonnet';
 
@@ -14,7 +14,7 @@ function LeftPannel() {
         <Col sm={3}>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link href="dashboard">Dashboard</Nav.Link>
+              <Nav.Link eventKey="dashboard">Dashboard</Nav.Link>
             </Nav.Item>
             <Nav.Item>
               <Nav.Link eventKey="second">Profile</Nav.Link>
@@ -32,8 +32,8 @@ function LeftPannel() {
         </Col>
         <Col sm={9}>
           <Tab.Content>
-            <Tab.Pane eventKey="first">
-           
+            <Tab.Pane eventKey="dashboard">
+            <AdminDashBoard />
             </Tab.Pane>
             <Tab.Pane eventKey="second">
               <div>Properties</div>

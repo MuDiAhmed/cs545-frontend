@@ -1,10 +1,10 @@
 import React from 'react';
-import Cards from './../Cards';
 import LeftPanel from './../LeftPanel';
 
-export default function (){
+export default function Home(){
     return (
         <div className="container">
+            <p></p>
             <LeftPanel />
         </div>
     )
