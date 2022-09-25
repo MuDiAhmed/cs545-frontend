@@ -3,9 +3,8 @@ import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
 import AdminDashBoard from './AdminDashBoard';
-import "./../Style.css"
-
-// import Sonnet from '../../components/Sonnet';
+import AdminPassResButton from './AdminPassRestButton';
+import "./../../Style.css";
 
 function AdminLeftPanel() {
   return (
@@ -39,6 +38,7 @@ function AdminLeftPanel() {
             
             </Tab.Pane>
             <Tab.Pane eventKey="third">
+            <AdminPassResButton />
             </Tab.Pane>
             <Tab.Pane eventKey="fourth">
 

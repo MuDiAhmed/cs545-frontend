@@ -2,7 +2,7 @@ import './App.css';
 import axios from "axios";
 import {Provider} from "react-redux";
 import {store} from "./store/store";
-import Base from "./component/Base";
+import Index from "./component";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
@@ -10,7 +10,7 @@ function App() {
   return (
       <Provider store={store}>
         <div className="App">
-          <Base></Base>
+          <Index></Index>
         </div>
       </Provider>
   );

@@ -2,8 +2,10 @@ import React from 'react';
 import AdminDashBoardCustomers from './AdminDashBoardCustomers';
 import AdminDashboardProperties from './AdminDashBoardProperties';
 import AdminGraph from './AdminGraph';
-import './../Style.css';
+import './../../Style.css';
+
 export default function AdminDashBoard(){
+
     return(
         <div className="dashboard--pro">
             

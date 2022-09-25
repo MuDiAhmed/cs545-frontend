@@ -2,9 +2,10 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
+import AdminLeftPanel from './AdminLeftPanel';
 import './../../Style.css';
-import LeftPanel from '../AdminLeftPanel';
-export default function Home(){
+
+export default function Admin(){
     return (
         <div className="container">
             
@@ -21,7 +22,7 @@ export default function Home(){
                 </Container>
                 </Navbar>
             <hr />
-            <LeftPanel />
+            <AdminLeftPanel />
         </div>
     )
 }

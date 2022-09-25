@@ -1,6 +1,24 @@
 import Table from 'react-bootstrap/Table';
+import { useDispatch, useSelector } from "react-redux";
+import { fetchProperties } from "./../../store/propertySlicer";
+import React, { useEffect } from "react";
 
-function ResponsiveBreakpointsExample() {
+function AdminDashBoardCustomers() {
+
+  const propertyState = useSelector((state) => state.property);
+
+  // console.log(propertyState.property);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+
+    dispatch(fetchProperties());
+
+  }, []);
+
+
+
   return (
     <div>
       <Table responsive="sm">
@@ -16,7 +34,7 @@ function ResponsiveBreakpointsExample() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>Table cell</td>
+            <td>{propertyState?.properties[0]?.name}</td>
             <td>Table cell</td>
             <td>Table cell</td>
             <td>Table cell</td>
@@ -102,4 +120,4 @@ function ResponsiveBreakpointsExample() {
   );
 }
 
-export default ResponsiveBreakpointsExample;
+export default AdminDashBoardCustomers;
