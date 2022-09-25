@@ -1,5 +1,4 @@
 import React from 'react';
-//import AdminDashBoardProperties from './AdminDashBoardProperties';
 import AdminDashBoardCustomers from './AdminDashBoardCustomers';
 import AdminDashboardProperties from './AdminDashboardProperties'
 export default function AdminDashBoard(){
