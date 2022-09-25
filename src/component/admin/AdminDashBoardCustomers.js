@@ -1,19 +1,19 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchProperties } from "./../../store/propertySlicer";
+import { fetchAllCustomer } from "./../../store/customerSlicer";
 import React, { useEffect } from "react";
 
 function AdminDashBoardCustomers() {
 
-  const propertyState = useSelector((state) => state.property);
+  const propertyState = useSelector((state) => state.customer);
 
-  // console.log(propertyState.property);
+  console.log(propertyState.customers);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
 
-    dispatch(fetchProperties());
+    dispatch(fetchAllCustomer());
 
   }, []);
 
@@ -34,82 +34,82 @@ function AdminDashBoardCustomers() {
         <tbody>
           <tr>
             <td>1</td>
-            <td>{propertyState?.properties[0]?.name}</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[0]?.name}</td>
+            <td>{propertyState?.customers[0]?.email}</td>
+            <td>{propertyState?.customers[0]?.contact}</td>
+            <td>{propertyState?.customers[0]?.address}</td>
 
           </tr>
           <tr>
             <td>2</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>3</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[1]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>4</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>5</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>6</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>7</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>8</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>9</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
           <tr>
             <td>10</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
-            <td>Table cell</td>
+            <td>{propertyState?.customers[2]?.name}</td>
+            <td>{propertyState?.customers[2]?.email}</td>
+            <td>{propertyState?.customers[2]?.contact}</td>
+            <td>{propertyState?.customers[2]?.address}</td>
 
           </tr>
 
