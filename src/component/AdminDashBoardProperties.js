@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-function AdminCards() {
+function AdminDashBoardProperties() {
  const values = ["abc","def","ghi","jkl","mno","pqr","stu"]
   return (
     <Row xs={1} md={5} className="g-4">
@@ -25,4 +25,4 @@ function AdminCards() {
   );
 }
 
-export default AdminCards;
+export default AdminDashBoardProperties;

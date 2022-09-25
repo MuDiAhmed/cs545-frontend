@@ -1,9 +1,9 @@
 import React from 'react';
 import AdminDashBoardCustomers from './AdminDashBoardCustomers';
-import AdminDashboardProperties from './AdminDashboardProperties'
+import AdminDashboardProperties from './AdminDashBoardProperties';
 export default function AdminDashBoard(){
     return(
-        <div className=".dashboard--pro">
+        <div className="dashboard--pro">
             
             <h4 style={{textAlign:"left"}}>Last 10 Properties Rented</h4>
             <AdminDashboardProperties />
