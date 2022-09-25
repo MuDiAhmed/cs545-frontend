@@ -11,48 +11,48 @@ import { createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 import { feachProduct } from "./propertySlice";
 
+import UncontrolledExample from "./Slider";
+
 export default function PropertiesDetail() {
-  const propertyState = useSelector((state) => state);
-  console.log(propertyState.property.status);
+  const propertyState = useSelector((state) => state.property);
+  console.log(propertyState.products);
+  //   const personState = useSelector((state) => state.person)
+  //   console.log(propertyState.property.status);
   // when ever we load this component we will get this property
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(feachProduct);
+    dispatch(feachProduct());
   }, []);
 
   return (
     <div>
       <div>
-        <CloseButton className="Button" />
+        <CloseButton />
       </div>
       <Table striped bordered hover>
         <thead></thead>
         <tbody>
           <tr>
             <td rowSpan={3}>
-              <BigPropertyImages />
+              <UncontrolledExample />
             </td>
             <td colSpan={2}>
               <div>
                 <div>
-                    
+                  {/* {propertyState} */}
                   {propertyState.status == "pending" ? (
                     <div>Loading</div>
-                  ) : ((console.log(propertyState.property.products))
-                    // <div>{propertyState.property.status}</div>
-                    // <div>{JSON.stringify(propertyState.property)}</div>
+                  ) : (
+                    <div> name - {propertyState.products?.name}</div>
                   )}
-                  {/* {propertyState} */}
                 </div>
-                <p>Mark</p>
+                <p>{propertyState.products?.name}</p>
                 <p>Mark</p>
                 <p>Mark</p>
               </div>
               <div>
-                <p>
-                  <Button variant="outline-danger">Add to Favorite List</Button>
-                </p>
+                <p></p>
                 <p>
                   <Button variant="outline-danger">Add to Favorite List</Button>
                 </p>
@@ -61,7 +61,6 @@ export default function PropertiesDetail() {
           </tr>
           <tr>
             <td className="subImag">
-              {" "}
               <PropertyImages />
             </td>
             <td>
