@@ -3,20 +3,20 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from "react-redux";
-import { feachAllProperty } from "./../../store/propertySlicer";
+import { feachAllPropertyWithImage } from "./../../store/propertySlicerAdmin";
 import React, { useEffect } from "react";
 
 function AdminManageProperties() {
 
-  const {properties, status} = useSelector((state) => state.property);
+  const {propertiesAdmin, status} = useSelector((state) => state.propertyAdmin);
 
-  console.log(properties);
+  console.log(propertiesAdmin);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
 
-    dispatch(feachAllProperty());
+    dispatch(feachAllPropertyWithImage());
 
   }, []);
 
@@ -25,7 +25,7 @@ function AdminManageProperties() {
     <h3 dir="ltr">Manage Properties</h3>
     <hr />
     <Row xs={1} md={5} className="g-4">
-      {Array.from(properties, data => (
+      {Array.from(propertiesAdmin, data => (
         <Col >
           <Card>
             <Card.Img variant="top" style={{height:"120px", width:"170px"}} src= {data.image}/>

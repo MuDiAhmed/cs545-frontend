@@ -6,7 +6,7 @@ import MockData from "./../data.json";
 
 
 
-export const feachAllProperty = createAsyncThunk("property/fetchAll", async () => {
+export const feachAllPropertyWithImage = createAsyncThunk("property/fetchAll", async () => {
     //   const result = await axios.get("http://localhost:8080/products");
     //   return result.data;
     //   Admin Property Slicer
@@ -17,15 +17,15 @@ export const feachAllProperty = createAsyncThunk("property/fetchAll", async () =
 
 
 const propertySlice = createSlice({
-  name:"property",
-  initialState: {properties: {}, status: 'hi'},
+  name:"propertyAdmin",
+  initialState: {propertiesAdmin: [], status: 'hi'},
   reducers: {},
   extraReducers: (builder) => {
-      builder.addCase(feachAllProperty.fulfilled, (state, action) => {
+      builder.addCase(feachAllPropertyWithImage.fulfilled, (state, action) => {
           state.properties = action.payload;
           state.status = 'completed'
       });
-      builder.addCase(feachAllProperty.pending,  (state) => {
+      builder.addCase(feachAllPropertyWithImage.pending,  (state) => {
           state.status = 'pending'
       });
   }
