@@ -3,8 +3,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import Table from "react-bootstrap/Table";
 
-import "./Property.css";
-
 import PropertyImages from "./PropertyImages";
 
 import { Button } from "react-bootstrap";
@@ -32,10 +30,10 @@ export default function PropertiesDetail() {
 
   return (
     <div>
-      <div >
+      <div class="align-self-end"  >
         <button 
           type="button"
-          class="btn-close align-items-end flex-column p-2"
+          class="btn-close "
           aria-label="Close"
           onClick={OnClickClose}
         ></button>
@@ -43,12 +41,12 @@ export default function PropertiesDetail() {
       
       <div class="container" style ={{minHeight: 100 + 'vh', marginTop:70+'px'}} >
       <div class="d-flex justify-content-start align-items-center row ">
-        <div class="col-sm-8" >
+        <div class="col-sm-7" >
           {" "}
           <UncontrolledExample />{" "}
         </div>
 
-        <div class="d-flex justify-content-between row col-sm-4 ">
+        <div class="d-flex justify-content-between row col-sm-5 ">
           <div class="col-sm-8">
             <PropertyDescriptor />
           </div>

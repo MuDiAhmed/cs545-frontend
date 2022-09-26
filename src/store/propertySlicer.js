@@ -8,11 +8,11 @@ export const feachAllProduct = createAsyncThunk(
     //   return result.data;
     const data = [
       {
-        name: "Redi",
-        price: 22,
-        numberOfRoom: 3,
+        price: 22000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
         views: 234,
-        size: 2333,
+        size: 23333,
         year: 2023,
       },
     ];
@@ -24,11 +24,12 @@ export const feachProduct = createAsyncThunk("property/fetch", async () => {
   //   const result = await axios.get("http://localhost:8080/products");
   //   return result.data;
   const data = {
-    name: "Redi",
-    price: 22,
-    numberOfRoom: 3,
+   
+    price: 22000,
+    numberOfRooms: 3,
+    numberOfBathrooms:2,
     views: 234,
-    size: 2333,
+    size: 23333,
     year: 2023,
   };
   return data;
