@@ -9,6 +9,7 @@ import MockData from "./../data.json";
 export const feachAllProperty = createAsyncThunk("property/fetchAll", async () => {
     //   const result = await axios.get("http://localhost:8080/products");
     //   return result.data;
+    //   Admin Property Slicer
 
     return MockData.properties.allPropertiesWithImg;
   }
