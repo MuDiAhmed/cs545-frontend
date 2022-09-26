@@ -8,9 +8,9 @@ import React, { useEffect } from "react";
 
 function AdminManageProperties() {
 
-  const {propertiesAdmin, status} = useSelector((state) => state.propertyAdmin);
+  const {properties, status} = useSelector((state) => state.propertyAdmin);
 
-  console.log(propertiesAdmin);
+  console.log(properties);
 
   const dispatch = useDispatch();
 
@@ -25,7 +25,7 @@ function AdminManageProperties() {
     <h3 dir="ltr">Manage Properties</h3>
     <hr />
     <Row xs={1} md={5} className="g-4">
-      {Array.from(propertiesAdmin, data => (
+      {Array.from(properties, data => (
         <Col >
           <Card>
             <Card.Img variant="top" style={{height:"120px", width:"170px"}} src= {data.image}/>
