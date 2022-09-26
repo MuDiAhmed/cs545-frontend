@@ -9,6 +9,7 @@ import logo from "../../img/logo.svg"
 
 function Header() {
   return (
+    <>
     <Navbar bg="light" expand="lg">
       <Container fluid style={{border: "2px   "}}>
         
@@ -17,8 +18,11 @@ function Header() {
         <Nav.Item>Sign In</Nav.Item>
 
       </Container>
+
     </Navbar>
+    </>
   );
+
 }
 
 export default Header;

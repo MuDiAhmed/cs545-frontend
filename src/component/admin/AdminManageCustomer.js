@@ -1,13 +1,14 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllCustomer } from "./../../store/customerSlicer";
+import { fetchAllCustomer } from "../../store/customerSlicer";
 import React, { useEffect } from "react";
+import Button from 'react-bootstrap/Button';
 
-function AdminDashBoardCustomers() {
+function AdminManageCustomer() {
 
-  const {customers, status} = useSelector((state) => state.customer);
+  const {customers,status} = useSelector((state) => state.customer);
 
-  console.log(customers);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -16,9 +17,12 @@ function AdminDashBoardCustomers() {
 
   }, []);
 
+
   return (
     <div>
-        <Table responsive="sm">
+      <h3 dir="ltr">Manage Customers</h3>
+      <hr />
+        <Table responsive="sm" size="sm">
         <thead>
           <tr>
             <th>#</th>
@@ -48,7 +52,13 @@ function AdminDashBoardCustomers() {
                                         {
                       <td>{item.address}</td>
                     }
-  
+                     {
+                      <td><Button variant="primary">Edit Customer</Button>{' '}</td>
+                    }
+                     {
+                      <td><Button variant="danger">Delete Customer</Button>{' '}</td>
+                    }
+                    
                    </tr>
                 ))
            }
@@ -59,4 +69,4 @@ function AdminDashBoardCustomers() {
   );
 }
 
-export default AdminDashBoardCustomers;
+export default AdminManageCustomer;
