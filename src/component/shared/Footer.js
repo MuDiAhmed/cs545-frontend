@@ -4,6 +4,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import './../../Style.css';
 export default function Footer() {
     return (
+        
         <Navbar className="AdminFooterPanel">
         <Container>
              <Navbar.Brand style={{color:"white"}}>All rights Reserved - Follow us on: </Navbar.Brand>

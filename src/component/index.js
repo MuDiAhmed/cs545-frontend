@@ -12,6 +12,7 @@ export default function Index() {
             <Header></Header>
             <RouterProvider router={router}/>
             <Footer></Footer>
+      
         </div>
     );
 }

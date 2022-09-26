@@ -2,6 +2,7 @@ import Admin from "./admin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
 import AdminPassReset from "./admin/AdminPassReset";
+import Addproperty from "./customer/AddProperty";
 
 export default [
     {
@@ -28,5 +29,11 @@ export default [
         path: "/dashboard",
         element: <Dashboard />
     },
+    {
+        path:'/property/add',
+        element: <Addproperty/>
+        
+
+    }
     
 ]
