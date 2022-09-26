@@ -18,7 +18,7 @@ export const feachAllPropertyWithImage = createAsyncThunk("property/fetchAll", a
 
 const propertySlice = createSlice({
   name:"propertyAdmin",
-  initialState: {propertiesAdmin: [], status: 'hi'},
+  initialState: {properties: [], status: 'hi'},
   reducers: {},
   extraReducers: (builder) => {
       builder.addCase(feachAllPropertyWithImage.fulfilled, (state, action) => {
