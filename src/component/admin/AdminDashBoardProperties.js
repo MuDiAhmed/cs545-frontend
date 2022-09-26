@@ -2,7 +2,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useDispatch, useSelector } from "react-redux";
-import { feachAllProperty } from "./../../store/propertySlicer";
+import { feachAllProperty } from "./../../store/propertySlicerAdmin";
 import React, { useEffect } from "react";
 
 function AdminDashBoardProperties() {
