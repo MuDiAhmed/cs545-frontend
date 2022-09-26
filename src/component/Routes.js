@@ -31,7 +31,7 @@ export default [
         element: <Dashboard />
     },
     {
-        // "/products/{id}",
+        // "/products",
         path: "/products",
         element: <PropertiesDetail />
     },

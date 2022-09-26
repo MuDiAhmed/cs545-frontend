@@ -1,6 +1,8 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import { Action } from "@remix-run/router";
 import axios from "axios";
+import {useParams} from "react-router-dom";
+
 export const feachAllProduct = createAsyncThunk(
   "property/fetchAll",
   async () => {
@@ -23,6 +25,9 @@ export const feachAllProduct = createAsyncThunk(
 export const feachProduct = createAsyncThunk("property/fetch", async () => {
   //   const result = await axios.get("http://localhost:8080/products");
   //   return result.data;
+
+  // const {v} = useParams();
+  
   const data = {
    
     price: 22000,

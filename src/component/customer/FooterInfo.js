@@ -1,19 +1,7 @@
-import React from 'react';
-import Container from 'react-bootstrap/Container';
-import Navbar from 'react-bootstrap/Navbar';
-import './../../Style.css';
-export default function Footer() {
-    return (
-       <div>
-         <Navbar className="AdminFooterPanel">
-        <Container>
-             <Navbar.Brand style={{color:"white"}}>All rights Reserved - Follow us on: </Navbar.Brand>
-             <Navbar.Toggle />
-       </Container>
-       
-       </Navbar>
-       <div>
-      <div class="container text-center" >
+export default function FooterInfo() {
+  return (
+    <div>
+      <div class="container text-center" style ={{minHeight: 60 + 'vh', marginTop:70+'px'}}>
         <div class="row row-cols-3">
           <div class="col">
             <div >
@@ -39,6 +27,5 @@ export default function Footer() {
         </div>
       </div>
     </div>
-       </div>
-    );
+  );
 }

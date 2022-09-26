@@ -12,6 +12,7 @@ import OnClickFavoriteList, {
 import { feachProduct } from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
+import { Link } from "react-router-dom";
 
 export default function PropertiesDetail() {
   const propertyState = useSelector((state) => state.property);
@@ -25,13 +26,19 @@ export default function PropertiesDetail() {
 
   return (
     <div>
-      <div class="  "  >
+      <div class="  " style={{display: 'flex',
+    alignItems: 'self-end',
+    flexDirection: 'column-reverse'
+}}  >
+  <Link to={"/dashboard"}>
         <button 
           type="button"
           class="btn-close "
           aria-label="Close"
           onClick={OnClickClose}
+
         ></button>
+        </Link>
       </div>
       
       <div class="container" style ={{minHeight: 100 + 'vh', marginTop:70+'px'}} >

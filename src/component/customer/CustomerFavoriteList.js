@@ -1,5 +1,6 @@
 import FavoriteList from "./FavoriteList";
 import TopPanel from "./FavoriteListTopPanel";
+import FooterInfo from "./FooterInfo";
 
 export default function CustomerFavoriteList() {
   return (
@@ -17,6 +18,9 @@ export default function CustomerFavoriteList() {
         </div>
         <div>
             <FavoriteList/>
+        </div>
+        <div>
+            <FooterInfo/>
         </div>
       </div>
     </div>

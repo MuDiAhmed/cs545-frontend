@@ -7,9 +7,9 @@ export default function SingleProerty() {
         <div class="col">
           <img
             className="img1"
-            src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp"
+            src="https://yourintegrityhome.com/wp-content/uploads/2021/03/Home-Cover-Image-1.jpg"
             alt="Property1"
-            width="200"
+            width="280"
             height="170"
           />
         </div>
