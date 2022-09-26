@@ -1,6 +1,6 @@
 import React from "react";
 import { Chart } from "react-google-charts";
-
+const b = 0;
 export const data = [
   ["x", "Customer", "Registered Property"],
   [0, 0, 0],
@@ -8,9 +8,9 @@ export const data = [
   [2, 23, 15],
   [3, 17, 9],
   [4, 18, 10],
-  [5, 9, 5],
+  [5, b, 5],
   [6, 11, 3],
-  [7, 27, 19],
+  [7, 0, 19],
 ];
 
 export const options = {

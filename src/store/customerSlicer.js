@@ -54,6 +54,7 @@ export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () =
           address : 827129992
       }];
     return data;
+
 });
 
 const customersSlice = createSlice({
@@ -64,6 +65,7 @@ const customersSlice = createSlice({
         builder.addCase(fetchAllCustomer.fulfilled, (state, action) => {
             state.customers = action.payload;
             state.status = 'completed'
+            
         });
         builder.addCase(fetchAllCustomer.pending,  (state) => {
             state.status = 'pending'

@@ -37,7 +37,7 @@ export const feachAllProperty = createAsyncThunk("property/fetchAll", async () =
         },
         {
           image: "https://hips.hearstapps.com/hmg-prod/images/laura-gonzalez-03-1663594324.jpg?crop=1.00xw:0.751xh;0,0.115xh&resize=1120:*",
-          price: 989282,
+          price: 989.200,
           numberOfRoom: 4,
           yearOfBuild: 2019,
           size: 72872

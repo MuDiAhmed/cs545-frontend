@@ -30,7 +30,7 @@ function AdminDashBoardProperties() {
             <Card.Body>
               <Card.Title style={{fontSize:"22px", fontWeight:"bold"}}>${data.price}</Card.Title>
               <Card.Text style={{fontSize:"12px"}}>
-                Number of Rooms: {data.numberOfRoom} , Year of Build: {data.yearOfBuild}, Size: {data.size} sqft
+                <b>Number of Rooms: </b>{data.numberOfRoom} , <b>Year of Build: </b>{data.yearOfBuild}, <b>Size:</b> {data.size} <b>sqft</b>
               </Card.Text>
             </Card.Body>
           </Card>
