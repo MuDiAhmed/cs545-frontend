@@ -1,17 +1,32 @@
 import Admin from "./admin";
-import Dashboard from "./admin/Dashboard";
+import AdminDashBoard from "./admin/AdminDashBoard";
+import Dashboard from "./customer/Dashboard"
+import AdminPassReset from "./admin/AdminPassReset";
 
 export default [
     {
         path: "/admin",
-        element: <Admin/>,
+        element: <Admin />,
         children: [
             {
                 path: "dashboard",
-                element: <Dashboard/>,
+                element: <AdminDashBoard/>
+            },
+            // {
+            //     path:"properties",
+            //     element: <div>Something</div>
+            // },
+            {
+                path:"profile",
+                element: <AdminPassReset />
             }
         ]
 
 
     },
+    {
+        path: "/dashboard",
+        element: <Dashboard />
+    },
+    
 ]
