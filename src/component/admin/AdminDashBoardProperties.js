@@ -7,9 +7,9 @@ import React, { useEffect } from "react";
 
 function AdminDashBoardProperties() {
 
-  const {properties, status} = useSelector((state) => state.propertyAdmin);
+  const {propertiesAdmin, status} = useSelector((state) => state.propertyAdmin);
 
-  console.log(properties);
+  console.log(propertiesAdmin);
 
   const dispatch = useDispatch();
 
@@ -21,7 +21,7 @@ function AdminDashBoardProperties() {
 
   return (
     <Row xs={1} md={5} className="g-4">
-      {Array.from(properties, data => (
+      {Array.from(propertiesAdmin, data => (
 
         <Col >
 

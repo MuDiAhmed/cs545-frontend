@@ -32,3 +32,6 @@ const propertySlice = createSlice({
 })
 
 export const { reducer } = propertySlice;
+
+
+
