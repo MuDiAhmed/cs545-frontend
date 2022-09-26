@@ -1,9 +1,14 @@
-import {Navbar, NavDropdown } from "react-bootstrap";
+import { Image } from 'react-bootstrap';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
+import logo from "../../img/logo.svg"
 
 function Header() {
   return (
-    <Navbar style={{backgroundColor: "#1872F0",textAlign: "left",borderRadius: "5px",color:"white"}}>
+  <Navbar style={{backgroundColor: "#1872F0",textAlign: "left",borderRadius: "5px",color:"white"}}>
         <Navbar.Brand style={{ color: "white" }} href="#home">Property Managment Portal (Admin Panel)</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">
@@ -12,6 +17,16 @@ function Header() {
             <NavDropdown.Item href="#action/3.2">Edit Profile</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
+
+    <Navbar bg="light" expand="lg">
+      <Container fluid style={{border: "2px   "}}>
+        
+        <Nav.Item style={{border: "2px   "}}>Home</Nav.Item>
+        <Nav.Item style={{border: "2px   "}}><Image src={logo}/></Nav.Item>
+        <Nav.Item>Sign In</Nav.Item>
+
+      </Container>
+
     </Navbar>
   );
 }
