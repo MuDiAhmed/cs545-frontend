@@ -6,40 +6,45 @@ export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () =
         {
             name : "Hiwot",
             email : "RetaH@miu.edu",
-            address : "Fairfield",
-            contact : 20298182018
+            contact : "Ottumwa",
+            address : 20298182018
         },
         {
-            customerName : "Hamida",
-            customerEmail : "hammaqso@miu.edu",
-            customerAddress : "Fairfield",
-            customerContact : 6417892938
+            name : "Hamida",
+            email : "hammaqso@miu.edu",
+            contact : "Fairfield",
+            address : 6417892938
         },
         {
             name : "Jamila",
             email : "jamilamaqsoudi@miu.edu",
-            address : "Maryland",
-            contact : 20298182018
+            contact : "Maryland",
+            address : 20298182018
         },
         {
-            customerName : "Hamida",
-            customerEmail : "hammaqso@miu.edu",
-            customerAddress : "Fairfield",
-            customerContact : 6417892938
+            name : "John",
+            email : "doejohn@miu.edu",
+            contact : "Burlington",
+            address : 6417892938
         },
         {
-            customerName : "Hamida",
-            customerEmail : "hammaqso@miu.edu",
-            customerAddress : "Fairfield",
-            customerContact : 6417892938
-        }
-]
+            name : "Sara",
+            email : "sarasmith@miu.edu",
+            contact : "Iowa",
+            address : 6417892938
+        },
+        {
+          name : "Ahmed",
+          email : "ahmedAli@miu.edu",
+          contact : "Virginia",
+          address : 827129992
+      }];
     return data;
 })
 
 const customersSlice = createSlice({
     name:"customer",
-    initialState: {customers: {}, status: 'hi'},
+    initialState: {customers: [], status: 'hi'},
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchAllCustomer.fulfilled, (state, action) => {

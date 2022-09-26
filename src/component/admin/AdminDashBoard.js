@@ -1,19 +1,24 @@
 import React from 'react';
+import Badge from 'react-bootstrap/Badge';
 import AdminDashBoardCustomers from './AdminDashBoardCustomers';
 import AdminDashboardProperties from './AdminDashBoardProperties';
 import AdminGraph from './AdminGraph';
-import './../../Style.css';
 export default function AdminDashBoard(){
     return(
         <div className="dashboard--pro">
-            
-            <h4 className="primary">Number of Customers and Registered Properties in Chart:</h4>
+
+
+            <hr />
+            <h3><Badge bg="primary">Number of Customers and Registered Properties in Chart:</Badge></h3>
+            <hr />
             <AdminGraph /> 
-            <hr/>
-            <h4 className="h4AdminDashBoard">Last 10 Properties Rented:</h4>
+            <hr />
+            <h3><Badge bg="primary">Last 10 Properties Rented:</Badge></h3>
+            <hr />
             <AdminDashboardProperties />
-            <hr></hr>
-            <h4 className="h4AdminDashBoard">Last 10 Recent Customers:</h4>
+            <hr />
+            <h3><Badge bg="primary">Last 10 Recent Registered Customers:</Badge></h3>
+            <hr />
             <AdminDashBoardCustomers />
             <hr/>
             

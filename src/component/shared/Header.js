@@ -3,7 +3,7 @@ import {Navbar, NavDropdown } from "react-bootstrap";
 
 function Header() {
   return (
-    <Navbar className="AdminHeaderPanel">
+    <Navbar style={{backgroundColor: "#1872F0",textAlign: "left",borderRadius: "5px",color:"white"}}>
         <Navbar.Brand style={{ color: "white" }} href="#home">Property Managment Portal (Admin Panel)</Navbar.Brand>
         <Navbar.Toggle />
         <Navbar.Collapse className="justify-content-end">

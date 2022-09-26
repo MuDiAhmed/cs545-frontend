@@ -20,19 +20,6 @@ export const feachAllProduct = createAsyncThunk(
   }
 );
 
-export const feachProduct = createAsyncThunk("property/fetch", async () => {
-  //   const result = await axios.get("http://localhost:8080/products");
-  //   return result.data;
-  const data = {
-    name: "Redi",
-    price: 22,
-    numberOfRoom: 3,
-    views: 234,
-    size: 2333,
-    year: 2023,
-  };
-  return data;
-});
 
 const propertySlice = createSlice({
   name: "property",
@@ -45,15 +32,6 @@ const propertySlice = createSlice({
       state.status = "completed";
     });
     builder.addCase(feachAllProduct.pending, (state) => {
-      state.status = "pending";
-    });
-
-    builder.addCase(feachProduct.fulfilled, (state, action) => {
-      console.log(action.payload);
-      state.products = action.payload;
-      state.status = "completed";
-    });
-    builder.addCase(feachProduct.pending, (state) => {
       state.status = "pending";
     });
   },

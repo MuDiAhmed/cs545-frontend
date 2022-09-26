@@ -1,14 +1,15 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllCustomer } from "./../../store/customerSlicer";
+import { fetchAllCustomer } from "../../store/customerSlicer";
 import React, { useEffect } from "react";
+import Button from 'react-bootstrap/Button';
 
-function AdminDashBoardCustomers() {
+function AdminManageCustomer() {
 
-  const {customers, status} = useSelector((state) => state.customer);
+  const propertyState = useSelector((state) => state.customer);
 
-  // console.log(propertyState.customers);
-  // console.log(propertyState.customers.name);
+  console.log(propertyState.customers);
+  console.log(propertyState.customers.name);
 
   const dispatch = useDispatch();
 
@@ -62,7 +63,7 @@ function AdminDashBoardCustomers() {
         <thead>
           <tr>
             <th>#</th>
-            {/* <th>{propertyState.customers?.name}</th> */}
+            <th>{propertyState.customers?.name}</th>
             <th>Customer Email</th>
             <th>Customer Address</th>
             <th>Customer Contact</th>
@@ -71,23 +72,30 @@ function AdminDashBoardCustomers() {
         <tbody>
 
            {
-                customers.map((item,i) =>(
+                data.map((item,i) =>(
                    <tr key={i}>
                                        {
                       <td>{i+1}</td>
                     }
                     {
-                      <td>{item.name}</td>
+                      <td>{data[i].name}</td>
                     }
                                         {
-                      <td>{item.email}</td>
+                      <td>{data[i].email}</td>
                     }
                                         {
-                      <td>{item.contact}</td>
+                      <td>{data[i].contact}</td>
                     }
                                         {
-                      <td>{item.address}</td>
+                      <td>{data[i].address}</td>
                     }
+                     {
+                      <td><Button variant="primary">Edit Customer</Button>{' '}</td>
+                    }
+                     {
+                      <td><Button variant="danger">Delete Customer</Button>{' '}</td>
+                    }
+                    
   
                    </tr>
                 ))
@@ -99,4 +107,4 @@ function AdminDashBoardCustomers() {
   );
 }
 
-export default AdminDashBoardCustomers;
+export default AdminManageCustomer;
