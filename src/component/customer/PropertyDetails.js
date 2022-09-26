@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Table from "react-bootstrap/Table";
 
-import PropertyImages from "./PropertyImages";
-
-import { Button } from "react-bootstrap";
-import { createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
 import UncontrolledExample from "./Slider";
@@ -16,7 +11,7 @@ import OnClickFavoriteList, {
 } from "./OnButtonClick";
 import { feachProduct } from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
-import PropertyDescriptor from "./PropertyDescription";
+import PropertyDescription from "./PropertyDescription";
 
 export default function PropertiesDetail() {
   const propertyState = useSelector((state) => state.property);
@@ -30,7 +25,7 @@ export default function PropertiesDetail() {
 
   return (
     <div>
-      <div class="align-self-end"  >
+      <div class="  "  >
         <button 
           type="button"
           class="btn-close "
@@ -48,7 +43,7 @@ export default function PropertiesDetail() {
 
         <div class="d-flex justify-content-between row col-sm-5 ">
           <div class="col-sm-8">
-            <PropertyDescriptor />
+            <PropertyDescription />
           </div>
           <div class="col-sm-4">
             <FavoriteList />

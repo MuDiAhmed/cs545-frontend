@@ -7,7 +7,7 @@ import { BigPropertyImages } from "./PropertyImages";
 import { useDispatch, useSelector } from "react-redux";
 import { feachProduct } from "../../store/propertySlicer";
 
-export default function PropertyDescriptor() {
+export default function PropertyDescription() {
   const propertyState = useSelector((state) => state.property);
 
   const dispatch = useDispatch();

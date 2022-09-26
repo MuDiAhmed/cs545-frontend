@@ -3,6 +3,7 @@ import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
 import AdminPassReset from "./admin/AdminPassReset";
 import PropertiesDetail from "./customer/PropertyDetails";
+import CustomerFavoriteList from "./customer/CustomerFavoriteList";
 
 export default [
     {
@@ -30,8 +31,13 @@ export default [
         element: <Dashboard />
     },
     {
+        // "/products/{id}",
         path: "/products",
         element: <PropertiesDetail />
+    },
+    {
+        path: "/favoritList",
+        element: <CustomerFavoriteList/>
     }
     
 ]
