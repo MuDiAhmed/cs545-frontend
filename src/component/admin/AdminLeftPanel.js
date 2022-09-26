@@ -1,31 +1,31 @@
-import Col from 'react-bootstrap/Col';
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-import AdminDashBoard from './AdminDashBoard';
-import AdminPassResButton from './AdminPassReset';
+
 
 
 function AdminLeftPanel() {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="dashboard">
+    <Tab.Container id="left-tabs-example" defaultActiveKey="">
+      <Row>
           <Nav variant="pills" className="flex-column">
             <Nav.Item>
-              <Nav.Link eventKey="dashboard" >Dashboard</Nav.Link>
+              <Nav.Link eventKey="dashboard" href="dashboard" >Dashboard</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="properties">Properties</Nav.Link>
+              <Nav.Link eventKey="properties" href="properties">Manage Properties</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="customer">Manage Customers</Nav.Link>
+              <Nav.Link eventKey="customer" href="customers">Manage Customers</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="owners">Manage Owners</Nav.Link>
+              <Nav.Link eventKey="owners" href="owners">Manage Owners</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="profile">Profile</Nav.Link>
+              <Nav.Link eventKey="profile" href="profile">Edit Profile</Nav.Link>
             </Nav.Item>
           </Nav>
+      </Row>
     </Tab.Container>
   );
 }

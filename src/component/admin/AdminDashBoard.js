@@ -9,18 +9,17 @@ export default function AdminDashBoard(){
 
 
             <hr />
-            <h3><Badge bg="primary">Number of Customers and Registered Properties in Chart:</Badge></h3>
+            <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "20px"}}>Number of Customers and Registered Properties in Chart:</h3>
             <hr />
             <AdminGraph /> 
             <hr />
-            <h3><Badge bg="primary">Last 10 Properties Rented:</Badge></h3>
+            <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "20px"}}>Last 10 Properties Rented:</h3>
             <hr />
             <AdminDashboardProperties />
             <hr />
-            <h3><Badge bg="primary">Last 10 Recent Registered Customers:</Badge></h3>
+            <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "20px"}}>Last 10 Recent Registered Customers:</h3>
             <hr />
             <AdminDashBoardCustomers />
-            <hr/>
             
         </div>
     )

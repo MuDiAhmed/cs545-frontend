@@ -3,6 +3,7 @@ import AdminDashBoard from "./admin/AdminDashBoard";
 import AdminPassReset from "./admin/AdminPassReset";
 import AdminManageCustomer from "./admin/AdminManageCustomer";
 import AdminManageOwner from "./admin/AdminManageOwner";
+import AdminManageProperties from "./admin/AdminManageProperties";
 
 export default [
     {
@@ -24,7 +25,11 @@ export default [
             {
                 path:"owners",
                 element: <AdminManageOwner />
-            }      
+            },
+            {
+                path:"properties",
+                element: <AdminManageProperties />
+            }    
         ]
 
 

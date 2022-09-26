@@ -21,7 +21,7 @@ export const fetchAllOwner = createAsyncThunk("owner/fetchAll", async () => {
 
 const ownersSlice = createSlice({
     name:"owner",
-    initialState: {customers: {}, status: 'hi'},
+    initialState: {owners: [], status: 'hi'},
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchAllOwner.fulfilled, (state, action) => {

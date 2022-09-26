@@ -1,5 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+
+
 export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () => {
     // const { data } = await axios.get("properties/")
     const data = [
@@ -34,13 +36,25 @@ export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () =
             address : 6417892938
         },
         {
+            name : "Salam",
+            email : "Salam@miu.edu",
+            contact : "Fairfield",
+            address : 9282781929
+        },
+        {
+            name : "Harriet",
+            email : "harriet@miu.edu",
+            contact : "Texas",
+            address : 8273789279
+        },
+        {
           name : "Ahmed",
           email : "ahmedAli@miu.edu",
           contact : "Virginia",
           address : 827129992
       }];
     return data;
-})
+});
 
 const customersSlice = createSlice({
     name:"customer",
