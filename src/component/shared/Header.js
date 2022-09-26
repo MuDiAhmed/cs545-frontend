@@ -8,6 +8,7 @@ import logo from "../../img/logo.svg"
 
 function Header() {
   return (
+    <>
   <Navbar style={{backgroundColor: "#1872F0",textAlign: "left",borderRadius: "5px",color:"white"}}>
         <Navbar.Brand style={{ color: "white" }} href="#home">Property Managment Portal (Admin Panel)</Navbar.Brand>
         <Navbar.Toggle />
@@ -17,7 +18,7 @@ function Header() {
             <NavDropdown.Item href="#action/3.2">Edit Profile</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
-
+    </Navbar>
     <Navbar bg="light" expand="lg">
       <Container fluid style={{border: "2px   "}}>
         
@@ -28,7 +29,9 @@ function Header() {
       </Container>
 
     </Navbar>
+    </>
   );
+
 }
 
 export default Header;

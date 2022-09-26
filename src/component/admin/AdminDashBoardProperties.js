@@ -2,26 +2,26 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import { useDispatch, useSelector } from "react-redux";
-import { feachAllProperty } from "./../../store/propertySlicerAdmin";
+import { feachAllPropertyWithImage } from "./../../store/propertySlicerAdmin";
 import React, { useEffect } from "react";
 
 function AdminDashBoardProperties() {
 
-  const {properties, status} = useSelector((state) => state.property);
+  const {propertiesAdmin, status} = useSelector((state) => state.propertyAdmin);
 
-  console.log(properties);
+  console.log(propertiesAdmin);
 
   const dispatch = useDispatch();
 
   useEffect(() => {
 
-    dispatch(feachAllProperty());
+    dispatch(feachAllPropertyWithImage());
 
   }, []);
 
   return (
     <Row xs={1} md={5} className="g-4">
-      {Array.from(properties, data => (
+      {Array.from(propertiesAdmin, data => (
 
         <Col >
 

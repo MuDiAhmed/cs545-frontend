@@ -35,8 +35,6 @@ export default [
                 element: <AdminManageProperties />
             }    
 
-            }
-
         ]
 
 
