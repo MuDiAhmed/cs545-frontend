@@ -1,15 +1,14 @@
-import {RouterProvider, createBrowserRouter} from "react-router-dom";
 import Footer from "./shared/Footer";
 import Header from "./shared/Header";
-import Routes from "./Routes";
+import {Outlet} from "react-router";
 
 
 export default function Index() {
-    const router = createBrowserRouter(Routes);
+
     return (
         <div>
             <Header></Header>
-            <RouterProvider router={router}/>
+            <Outlet />
             <Footer></Footer>
         </div>
     );

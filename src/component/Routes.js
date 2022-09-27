@@ -2,55 +2,76 @@ import Admin from "./admin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
 import AdminPassReset from "./admin/AdminPassReset";
+import Addproperty from "./customer/AddProperty";
 import AdminManageCustomer from "./admin/AdminManageCustomer";
 import AdminManageOwner from "./admin/AdminManageOwner";
 import AdminManageProperties from "./admin/AdminManageProperties";
 import PropertiesDetail from "./customer/PropertyDetails";
+import LoginCallback from "./auth/LoginCallback";
+import Index from "./index";
+import LogoutCallback from "./auth/LogoutCallback";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
-
 
 export default [
     {
-        path: "/admin",
-        element: <Admin />,
+        path: "/",
+        element: <Index/>,
         children: [
             {
-                path: "dashboard",
-                element: <AdminDashBoard/>
+                path: "login-callback",
+                element: <LoginCallback/>
             },
             {
-                path:"profile",
-                element: <AdminPassReset />
+                path: "logout-callback",
+                element: <LogoutCallback/>
             },
             {
-                path:"customers",
-                element: <AdminManageCustomer />
+                path: "admin",
+                element: <Admin/>,
+                children: [
+                    {
+                        path: "dashboard",
+                        element: <AdminDashBoard/>
+                    },
+                    {
+                        path: "profile",
+                        element: <AdminPassReset/>
+                    },
+                    {
+                        path: "customers",
+                        element: <AdminManageCustomer/>
+                    },
+                    {
+                        path: "owners",
+                        element: <AdminManageOwner/>
+                    },
+                    {
+                        path: "properties",
+                        element: <AdminManageProperties/>
+                    }
+                ]
             },
             {
-                path:"owners",
-                element: <AdminManageOwner />
+                path: "/dashboard",
+                element: <Dashboard/>
             },
             {
-                path:"properties",
-                element: <AdminManageProperties />
-            }    
+                path: "/products",
+                element: <PropertiesDetail/>
+            },
+            {
+                path: "/dashboard",
+                element: <Dashboard/>
+            },
+            {
+                path: '/property/add',
+                element: <Addproperty/>
 
+            },
+            {
+                path: "/favoriteList",
+                element: <CustomerFavoriteList/>
+            }
         ]
-
-
-    },
-    {
-        path: "/dashboard",
-        element: <Dashboard />
-    },
-    {
-        // "/products/{id}",
-        path: "/products",
-        element: <PropertiesDetail />
-    },
-    {
-        path: "/favoritList",
-        element: <CustomerFavoriteList/>
     }
-    
 ]
