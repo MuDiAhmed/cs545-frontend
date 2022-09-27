@@ -22,7 +22,9 @@ function AdminDashBoardProperties() {
   return (
     <Row xs={1} md={5} className="g-4">
       {Array.from(properties, data => (
+
         <Col >
+
           <Card>
             <Card.Img variant="top" style={{height:"120px", width:"170px"}} src= {data.image}/>
             <Card.Body>

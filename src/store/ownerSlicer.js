@@ -4,14 +4,12 @@ export const fetchAllOwner = createAsyncThunk("owner/fetchAll", async () => {
     // const { data } = await axios.get("properties/")
     const data = [
         {
-            id : 1,
             name : "Ahmad",
             email : "AhmadAli@miu.edu",
             contact : "Ottumwa",
             address : 20298182018
         },
         {
-            id: 2,
             name : "Michael",
             email : "MichaelRod@miu.edu",
             contact : "Fairfield",
@@ -21,18 +19,13 @@ export const fetchAllOwner = createAsyncThunk("owner/fetchAll", async () => {
     return data;
 })
 
-export const deleteOwner = createAsyncThunk("", async (ownerId) => {
-
-    console.log(`Owner with id ${ownerId} has been deleted.`)
-})
-
 const ownersSlice = createSlice({
     name:"owner",
     initialState: {owners: [], status: 'hi'},
     reducers: {},
     extraReducers: (builder) => {
         builder.addCase(fetchAllOwner.fulfilled, (state, action) => {
-            state.owners = action.payload;
+            state.customers = action.payload;
             state.status = 'completed'
         });
         builder.addCase(fetchAllOwner.pending,  (state) => {
