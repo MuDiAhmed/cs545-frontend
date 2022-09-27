@@ -1,14 +1,7 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import Table from "react-bootstrap/Table";
 
-import "./Property.css";
-
-import PropertyImages from "./PropertyImages";
-
-import { Button } from "react-bootstrap";
-import { createSlice } from "@reduxjs/toolkit";
 import { useDispatch, useSelector } from "react-redux";
 
 import UncontrolledExample from "./Slider";
@@ -18,7 +11,7 @@ import OnClickFavoriteList, {
 } from "./OnButtonClick";
 import { feachProduct } from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
-import PropertyDescriptor from "./PropertyDescription";
+import PropertyDescription from "./PropertyDescription";
 
 export default function PropertiesDetail() {
   const propertyState = useSelector((state) => state.property);
@@ -32,10 +25,10 @@ export default function PropertiesDetail() {
 
   return (
     <div>
-      <div >
+      <div class="  "  >
         <button 
           type="button"
-          class="btn-close align-items-end flex-column p-2"
+          class="btn-close "
           aria-label="Close"
           onClick={OnClickClose}
         ></button>
@@ -43,14 +36,14 @@ export default function PropertiesDetail() {
       
       <div class="container" style ={{minHeight: 100 + 'vh', marginTop:70+'px'}} >
       <div class="d-flex justify-content-start align-items-center row ">
-        <div class="col-sm-8" >
+        <div class="col-sm-7" >
           {" "}
           <UncontrolledExample />{" "}
         </div>
 
-        <div class="d-flex justify-content-between row col-sm-4 ">
+        <div class="d-flex justify-content-between row col-sm-5 ">
           <div class="col-sm-8">
-            <PropertyDescriptor />
+            <PropertyDescription />
           </div>
           <div class="col-sm-4">
             <FavoriteList />

@@ -7,7 +7,7 @@ import { BigPropertyImages } from "./PropertyImages";
 import { useDispatch, useSelector } from "react-redux";
 import { feachProduct } from "../../store/propertySlicer";
 
-export default function PropertyDescriptor() {
+export default function PropertyDescription() {
   const propertyState = useSelector((state) => state.property);
 
   const dispatch = useDispatch();
@@ -26,21 +26,15 @@ export default function PropertyDescriptor() {
               {propertyState.status == "pending" ? (
                 <div>Loading</div>
               ) : (
-                <div> Price :${propertyState.products?.price}</div>
+                <div class="h5  "> Price :${propertyState.products?.price}</div>
               )}
             </div>
+            
             <div>
               {propertyState.status == "pending" ? (
                 <div>Loading</div>
               ) : (
-                <div> name - {propertyState.products?.name}</div>
-              )}
-            </div>
-            <div>
-              {propertyState.status == "pending" ? (
-                <div>Loading</div>
-              ) : (
-                <div> numberOfRoom:{propertyState.products?.numberOfRoom}</div>
+                <div> numberOfRooms:{propertyState.products?.numberOfRooms}</div>
               )}
             </div>
             <div>
@@ -48,33 +42,26 @@ export default function PropertyDescriptor() {
                 <div>Loading</div>
               ) : (
                 <div>
-                  <p>Views:{propertyState.products?.views}</p>
+                  <p>numberOfBathrooms:{propertyState.products?.numberOfBathrooms}</p>
                 </div>
               )}
             </div>
           </div>
-
 
           <div class="col-sm-6">
             <div >
               {propertyState.status == "pending" ? (
                 <div>Loading</div>
               ) : (
-                <div> Price :${propertyState.products?.price}</div>
+                <div> Size :{propertyState.products?.size}</div>
               )}
             </div>
+        
             <div>
               {propertyState.status == "pending" ? (
                 <div>Loading</div>
               ) : (
-                <div> Price :${propertyState.products?.price}</div>
-              )}
-            </div>
-            <div>
-              {propertyState.status == "pending" ? (
-                <div>Loading</div>
-              ) : (
-                <div> Price :${propertyState.products?.price}</div>
+                <p>Views:{propertyState.products?.views}</p>
               )}
             </div>
 

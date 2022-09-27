@@ -41,6 +41,21 @@ import seven from  './img/1 copy.jpg'
         image: seven,
         price: 987,
         location: "Iowa"
+    },
+    {
+        image: seven,
+        price: 987,
+        location: "Iowa"
+    },
+    {
+        image: seven,
+        price: 987,
+        location: "Iowa"
+    },
+    {
+        image: seven,
+        price: 987,
+        location: "Iowa"
     }
 ]
 
