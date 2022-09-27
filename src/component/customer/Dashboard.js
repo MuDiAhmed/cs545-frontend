@@ -59,7 +59,7 @@ export default function Home() {
                   <Form.Label>Size</Form.Label>
                 </Col>
                 <Col md={9}>
-                  <Form.Control type="number" placeholder="size" />
+                  <Form.Control type="number" min ='0' placeholder="size" />
                 </Col>
               </Row>
             </Form.Group>
@@ -84,9 +84,7 @@ export default function Home() {
           <h3>About Us</h3>
           <p>   Line 3:8:  'Row' is defined but never used no-unused-vars
           Line 5:8:  'AdminDashBoard' is defined but never used no-unused-vars
-          Line 6:8:  'AdminPassResButton' is defined but never used  no-unused-vars
-        
-        src/store/propertySlicer.js
+          Line 6:8:  'AdminPassResButton' is defined but never used  no-unused-vars src/store/propertySlicer.js
            </p>
           </div>
          
