@@ -8,6 +8,7 @@ export const feachAllProduct = createAsyncThunk(
   async () => {
     //   const result = await axios.get("http://localhost:8080/products");
     //   return result.data;
+    // id
     const data = [
       {
         price: 22000,

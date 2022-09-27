@@ -54,7 +54,7 @@ export default function PropertiesDetail() {
           </div>
           <div class="col-sm-4">
             <FavoriteList />
-            <Request />
+            <Request/>
           </div>
         </div>
       </div>

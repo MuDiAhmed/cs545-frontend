@@ -45,7 +45,7 @@ export default [
     },
     {
         // "/products",
-        path: "/products",
+        path: "/propertys",
         element: <PropertiesDetail />
     },
     {

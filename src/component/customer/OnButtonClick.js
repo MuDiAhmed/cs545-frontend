@@ -2,6 +2,8 @@ import { Popover } from "bootstrap";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FavoriteModal from "./FavoriteModal";
+import {Request} from "./PropertyNavigate";
+import RequestPopup from "./RequestPopup";
 
 export default function OnClickFavoriteList() {
   //   return <div>Router to Favorite List </div>;
@@ -24,6 +26,19 @@ export default function OnClickFavoriteList() {
 export function OnClickRequest() {
   //   return <div>Request for Rent/Buy </div>;
   console.log("Request");
+  const [request, setRequest] = useState(true);
+
+  const handleCloseRequest = () => setRequest(false);
+  const handleRequestClick = () => setRequest(true);
+
+  return (
+      <RequestPopup
+          // setShow={setShow}
+          request={request}
+          handleCloseRequest={handleCloseRequest}
+          // handleShow={handleShow}
+      />
+  );
 }
 export function OnClickClose() {
   //   return <div>Request for Rent/Buy </div>;
