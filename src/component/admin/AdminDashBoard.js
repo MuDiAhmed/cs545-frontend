@@ -5,9 +5,7 @@ import AdminDashboardProperties from './AdminDashBoardProperties';
 import AdminGraph from './AdminGraph';
 export default function AdminDashBoard(){
     return(
-        <div className="dashboard--pro">
-
-
+        <div>
             <hr />
             <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "20px"}}>Number of Customers and Registered Properties in Chart:</h3>
             <hr />
