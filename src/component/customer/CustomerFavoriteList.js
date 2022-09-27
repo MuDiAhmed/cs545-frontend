@@ -19,9 +19,7 @@ export default function CustomerFavoriteList() {
         <div>
             <FavoriteList/>
         </div>
-        <div>
-            <FooterInfo/>
-        </div>
+
       </div>
     </div>
   );

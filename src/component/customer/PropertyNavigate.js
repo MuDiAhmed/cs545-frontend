@@ -5,9 +5,9 @@ import Modal from "react-bootstrap/Modal";
 import FavoriteModal from "./FavoriteModal";
 import RequestPopup from "./RequestPopup";
 
-export default function FavoriteList() {
+export default function FavoriteList(props) {
   const [show, setShow] = useState(false);
-
+//TODO how can I
   const handleClose = () => setShow(false);
 
   const handleFavListClick = () => setShow(true);
@@ -22,11 +22,11 @@ export default function FavoriteList() {
         </p>
       </div>
 
-      <FavoriteModal show={show} handleClose={handleClose} />
+      <FavoriteModal show={show} handleClose={handleClose} id={props.id}/>
     </div>
   );
 }
-export function Request() {
+export function Request(props) {
     const [show, setShow] = useState(false);
     const valeRef = createRef('default');
     const handleClose = function () {
@@ -48,7 +48,7 @@ export function Request() {
                 </p>
             </div>
 
-            <RequestPopup show={show} handleClose={handleClose} />
+            <RequestPopup show={show} handleClose={handleClose} id={props.id} />
         </div>
     );
 }

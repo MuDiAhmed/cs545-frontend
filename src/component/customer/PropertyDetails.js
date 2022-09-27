@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
 import { useDispatch, useSelector } from "react-redux";
 
 import UncontrolledExample from "./Slider";
@@ -9,10 +7,11 @@ import OnClickFavoriteList, {
   OnClickRequest,
   OnClickClose,
 } from "./OnButtonClick";
-import { feachProduct } from "../../store/propertySlicer";
+import {feachAllProduct, feachProduct} from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
-import { Link } from "react-router-dom";
+import {Link, useParams} from "react-router-dom";
+
 
 export default function PropertiesDetail() {
   const propertyState = useSelector((state) => state.property);
@@ -20,9 +19,14 @@ export default function PropertiesDetail() {
 
   const dispatch = useDispatch();
 
+    const {id} = useParams();
+    console.log(id);
+
   useEffect(() => {
-    dispatch(feachProduct());
+    dispatch(feachProduct(id));
   }, []);
+
+
 
   return (
     <div>
@@ -53,8 +57,8 @@ export default function PropertiesDetail() {
             <PropertyDescription />
           </div>
           <div class="col-sm-4">
-            <FavoriteList />
-            <Request/>
+            <FavoriteList id ={id} />
+            <Request id = {id}/>
           </div>
         </div>
       </div>

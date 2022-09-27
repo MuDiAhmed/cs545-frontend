@@ -11,7 +11,32 @@ export const feachAllProduct = createAsyncThunk(
     // id
     const data = [
       {
+        picture:"https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp",
         price: 22000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 232000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 652000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 5320690,
         numberOfRooms: 3,
         numberOfBathrooms:2,
         views: 234,
@@ -23,8 +48,8 @@ export const feachAllProduct = createAsyncThunk(
   }
 );
 
-export const feachProduct = createAsyncThunk("property/fetch", async () => {
-  //   const result = await axios.get("http://localhost:8080/products");
+export const feachProduct = createAsyncThunk("property/fetch", async (id) => {
+  //   const result = await axios.get("http://localhost:8080/products/{id}");
   //   return result.data;
 
   // const {v} = useParams();

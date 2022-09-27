@@ -33,9 +33,7 @@ export default [
             {
                 path:"properties",
                 element: <AdminManageProperties />
-            }    
-
-        ]
+            }]
 
 
     },
@@ -45,7 +43,7 @@ export default [
     },
     {
         // "/products",
-        path: "/propertys",
+        path: "/products/:id",
         element: <PropertiesDetail />
     },
     {

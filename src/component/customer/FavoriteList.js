@@ -3,6 +3,7 @@ import PropertiesDetail from "./PropertyDetails";
 import SingleProerty from "./SingleProperty";
 
 export default function FavoriteList() {
+
   return (
     <div class="container text-center">
       <div class="row row-cols-2">
@@ -11,15 +12,7 @@ export default function FavoriteList() {
             <SingleProerty/>
 
         </div>
-        <div class="col">
-        <SingleProerty/>
-        </div>
-        <div class="col">
-        <SingleProerty/>
-        </div>
-        <div class="col">
-        <SingleProerty/>
-        </div>
+
       </div>
     </div>
   );

@@ -14,7 +14,7 @@ export function BigPropertyImages() {
     <div>
       <img
         className="mainImage"
-        src="https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp"
+        src="https://yourintegrityhome.com/wp-content/uploads/2021/03/Home-Cover-Image-1.jpg"
         alt="Property1"
       />
     </div>
