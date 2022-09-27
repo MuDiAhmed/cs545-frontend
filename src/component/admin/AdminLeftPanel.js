@@ -1,14 +1,12 @@
 import Nav from 'react-bootstrap/Nav';
 import Row from 'react-bootstrap/Row';
 import Tab from 'react-bootstrap/Tab';
-
-
-
 function AdminLeftPanel() {
   return (
-    <Tab.Container id="left-tabs-example" defaultActiveKey="">
+    <Tab.Container id="left-tabs-example">
+      <hr />
       <Row>
-          <Nav variant="pills" className="flex-column">
+          <Nav variant="tabs" justify="true" className="flex-column" style={{fontSize:"20px"}}>
             <Nav.Item>
               <Nav.Link eventKey="dashboard" href="dashboard" >Dashboard</Nav.Link>
             </Nav.Item>
