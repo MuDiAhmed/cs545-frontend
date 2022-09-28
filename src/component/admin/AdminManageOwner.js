@@ -10,7 +10,6 @@ function AdminManageOwner() {
   console.log(owners);
 
 
-
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -22,9 +21,9 @@ function AdminManageOwner() {
 
 
   const deleteOwnerById = (index) => {
-    const idx = owners[index].id; 
+    const idx = owners[index].id;
     dispatch(deleteOwner(idx));
-    }
+  }
 
 
   return (
@@ -65,7 +64,7 @@ function AdminManageOwner() {
                      {
                       <td><Button variant="danger" onClick={()=>deleteOwnerById(i)}>Delete Owner</Button>{' '}</td>
                     }
-                    
+
                    </tr>
                 ))
            }
