@@ -27,6 +27,10 @@
 .App-link {
   color: #61dafb;
 }
+.dropdown-menu[data-bs-popper]{
+  left: auto !important;
+  right: 0;
+}
 
 @keyframes App-logo-spin {
   from {
