@@ -10,6 +10,9 @@ import {UserManger} from "./component/auth/config";
 function App() {
     axios.defaults.baseURL = "http://localhost:8080/api/";
     const router = createBrowserRouter(Routes);
+    UserManger.events.addUserLoaded((user) => {
+        axios.defaults.headers.common['Authorization'] = user.access_token;
+    })
     return (
         <Provider store={store}>
             <div className="App">

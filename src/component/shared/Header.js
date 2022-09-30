@@ -1,4 +1,4 @@
-import {Button, Image} from 'react-bootstrap';
+import {Button, Image, NavDropdown} from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,6 +8,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {logout, login, fetchUser} from "../../store/userSlicer";
 import {useEffect} from "react";
 import {UserManger} from "../auth/config";
+import CustomerHeaderMenu from "./CustomerHeaderMenu";
 
 function Header() {
     const {user} = useSelector((state) => state.user);
@@ -31,7 +32,9 @@ function Header() {
           <Nav.Item style={{border: "2px   "}}><Link to={"/dashboard"} ><Image src={logo}/></Link></Nav.Item>
           {Object.keys(user).length === 0 ?
               <Nav.Item><Button onClick={onSignIn}>Sign in</Button></Nav.Item>
-              : <Nav.Item><Button onClick={onSignOut}>Sign out</Button></Nav.Item>}
+              :
+              <CustomerHeaderMenu user={user} onSignOut={onSignOut} />
+          }
       </Container>
 
     </Navbar>

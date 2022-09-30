@@ -2,7 +2,7 @@ import Admin from "./admin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
 import AdminPassReset from "./admin/AdminPassReset";
-import Addproperty from "./customer/AddProperty";
+import AddProperty from "./customer/AddProperty";
 import AdminManageCustomer from "./admin/AdminManageCustomer";
 import AdminManageOwner from "./admin/AdminManageOwner";
 import AdminManageProperties from "./admin/AdminManageProperties";
@@ -60,12 +60,8 @@ export default [
                 element: <PropertiesDetail/>
             },
             {
-                path: "/dashboard",
-                element: <Dashboard/>
-            },
-            {
                 path: '/property/add',
-                element: <Addproperty/>
+                element: <AddProperty/>
 
             },
             {
