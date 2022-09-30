@@ -37,14 +37,12 @@ export default function FavoriteModal({ show, handleClose,id }) {
   const onAddFavoriteList = (e) => {
 
     setNewFavorite(e.target.value);
-
-    // console.log(favoriteList.products?.price);
-
     const requestBody = {
-      name:e.target.value,
-      propId: {id}
+      comment:e.target.value
     }
-    axios.post(("http://localhost:8080/favorites", requestBody))
+    // TODO fix the request
+    axios.post(("api/properties/{id}/requests",
+        requestBody))
 
 
   };

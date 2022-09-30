@@ -11,8 +11,6 @@ export default function Favorites() {
   const properties = propertyList.favorite;
 
 
-  // console.log('this',properties)
-
 
 
   const dispatch = useDispatch();
@@ -25,13 +23,12 @@ export default function Favorites() {
   return (
 
     <div >
-    <div>
-    </div>
       {properties.map((prop) =>
 
-          <Properties properties={prop}/>
+        <Properties properties={prop}/>
 
       )}
+
 
     </div>
   );

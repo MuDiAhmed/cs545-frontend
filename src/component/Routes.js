@@ -7,6 +7,7 @@ import AdminManageOwner from "./admin/AdminManageOwner";
 import AdminManageProperties from "./admin/AdminManageProperties";
 import PropertiesDetail from "./customer/PropertyDetails";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
+import OwnerDashboard from "./owner/OwnerDashboard";
 
 
 export default [
@@ -49,6 +50,10 @@ export default [
     {
         path: "/favoritList",
         element: <CustomerFavoriteList/>
+    },
+    {
+        path: "/owners/:id",
+        element: <OwnerDashboard/>
     }
     
 ]
