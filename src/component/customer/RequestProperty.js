@@ -24,7 +24,7 @@ export default function RequestProperty({ show, handleClose, id }) {
         }
         console.log(id);
         setRequest('default');
-        // axsios post request.
+
         axios.post(("http://localhost:8080/user/request", requestBody))
         //TODO change the button to cancel request
 

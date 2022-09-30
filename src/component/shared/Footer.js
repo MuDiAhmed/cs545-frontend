@@ -12,6 +12,7 @@ export default function Footer() {
        
        </Navbar>
        <div>
+           <h3 style={{ backgroundColor: "#1872F0", opacity: 0.7,textAlign: "left",padding:"20px",borderRadius: "1px",color:"white",fontSize: "20px"}}></h3>
       <div class="container text-center" >
         <div class="row row-cols-3">
           <div class="col">

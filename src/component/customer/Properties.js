@@ -11,7 +11,8 @@ const value = props.properties;
     return(
         <div >
             <div >
-                <h3 class="font-weight-bold" >{value.name}</h3>
+                <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "17px"}}>{value.name}</h3>
+
                     <div>
                         <div>
                             {value.property.map((i) =>

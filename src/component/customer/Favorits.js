@@ -25,9 +25,11 @@ export default function Favorites() {
   return (
 
     <div >
+    <div>
+    </div>
       {properties.map((prop) =>
 
-        <Properties properties={prop}/>
+          <Properties properties={prop}/>
 
       )}
 

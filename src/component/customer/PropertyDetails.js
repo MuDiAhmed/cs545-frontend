@@ -11,6 +11,7 @@ import {fetchAllProduct, fetchProduct} from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
 import {Link, useParams} from "react-router-dom";
+import PropertyDetailDisplay from "./PropertyDetailDisplay";
 
 
 export default function PropertiesDetail() {
@@ -59,10 +60,18 @@ export default function PropertiesDetail() {
           <div class="col-sm-4">
             <FavoriteList id ={id} />
             <Request id = {id}/>
+
           </div>
         </div>
+
       </div>
+          <div >
+           <div class="position-absolute top-100 start-50 translate-middle">
+               <  PropertyDetailDisplay/>
+           </div>
+          </div>
     </div>
+
     </div>
   );
 }
