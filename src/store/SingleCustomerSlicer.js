@@ -4,8 +4,8 @@ import {useParams} from "react-router-dom";
 
 
 export const fetchCustomer = createAsyncThunk("customer/fetchAll", async () => {
-    // const { data } = await axios.get("properties/")
-
+    //   const result = await axios.get("http://localhost:8080/products");
+    //   return result.data;
     const data ={
 
             name : "Hiwot",
@@ -23,11 +23,32 @@ export const fetchCustomer = createAsyncThunk("customer/fetchAll", async () => {
         }
         ]
         };
-    return data;
+    const data2 =[{
+            id: "1",
+            name: "Iowa",
+            prop:[]
+        },{
+            id: "2",
+            name: "Virginia",
+            prop:[]
+        },
+        {
+            id: "3",
+            name: "California",
+            prop:[]
+        },
+        {
+            id: "4",
+            name: " New Jersey",
+            prop:[]
+        },
+        ]
+    ;
+    return data2;
 
 });
 
-const SinglCustomersSlice = createSlice({
+const SingleCustomersSlice = createSlice({
     name:"customer",
     initialState: {customers: [], status: 'hiii'},
     reducers: {},
@@ -43,4 +64,4 @@ const SinglCustomersSlice = createSlice({
     }
 })
 
-export const { reducer } = SinglCustomersSlice;
+export const { reducer } = SingleCustomersSlice;

@@ -5,7 +5,7 @@ import PropertyImages from "./PropertyImages";
 import { BigPropertyImages } from "./PropertyImages";
 
 import { useDispatch, useSelector } from "react-redux";
-import { feachProduct } from "../../store/propertySlicer";
+import { fetchProduct } from "../../store/propertySlicer";
 import { Link } from "react-router-dom";
 
 export default function PropertyDescription() {
@@ -14,7 +14,7 @@ export default function PropertyDescription() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(feachProduct());
+    dispatch(fetchProduct());
   }, []);
 
   return (

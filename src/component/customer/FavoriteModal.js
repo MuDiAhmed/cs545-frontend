@@ -2,11 +2,12 @@ import React, {useEffect, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import {useDispatch, useSelector} from "react-redux";
-import {feachProduct} from "../../store/propertySlicer";
+import {fetchProduct} from "../../store/propertySlicer";
 import {fetchCustomer} from "../../store/SingleCustomerSlicer";
 import axios from "axios";
 import {hover} from "@testing-library/user-event/dist/hover";
 import {updateFavList} from "../../store/updateFavListSlicer";
+import {useParams} from "react-router-dom";
 
 export default function FavoriteModal({ show, handleClose,id }) {
   const [favorit, setFavorit] = useState({
@@ -16,15 +17,15 @@ export default function FavoriteModal({ show, handleClose,id }) {
   const [newFavorite, setNewFavorite] = useState("default");
 
   const favoriteList = useSelector((state) => state.singleCustomer);
-  const favoriteListOfCus = favoriteList.customers.favoritList;
+  const favoriteListOfCus = favoriteList.customers;
 
 
-  // favoriteListOfCus.map((item) =>{
-  //     console.log(item.name);
-  //     //TODO display on Favorite list as a button
-  // })
 
-  console.log(favoriteList.customers.favoritList);
+
+    //TODO display on Favorite list as a button
+
+
+  console.log( 'add ',favoriteList.customers);
 
 
   const dispatch = useDispatch();
@@ -36,15 +37,15 @@ export default function FavoriteModal({ show, handleClose,id }) {
   const onAddFavoriteList = (e) => {
 
     setNewFavorite(e.target.value);
-    console.log(e.target.value);
-    console.log(favoriteList.products?.price);
-    const requestBody = {
-      id:4,
-      name:e.target.value,
-      prop:[]
 
+    // console.log(favoriteList.products?.price);
+
+    const requestBody = {
+      name:e.target.value,
+      propId: {id}
     }
-dispatch(addNewFavoriteList (requestBody));
+    axios.post(("http://localhost:8080/favorites", requestBody))
+
 
   };
   const onselectFav = (e) => {
@@ -84,12 +85,15 @@ dispatch(updateFavList(requestBody))
         </Modal.Header>
         <Modal.Body>
 
+
             <ul>
-              {favoriteListOfCus.map(fav => (
+              {favoriteListOfCus.map((fav) =>
                   <li onClick={() =>onselectFav(fav)}>{fav.name}</li>
 
-              ))}
+              )}
             </ul>
+
+
 
         </Modal.Body>
         <Modal.Body>
@@ -105,7 +109,7 @@ dispatch(updateFavList(requestBody))
                   />
                 </div>
                 <div class="col-sm-4">
-                  <Button variant="primary" onClick={addNewFavoriteList}>
+                  <Button variant="primary" onClick={onAddFavoriteList}>
                     add
                   </Button>
                 </div>

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
+import axios from "axios";
 
-export default function RequestPopup({ show, handleClose, id }) {
+export default function RequestProperty({ show, handleClose, id }) {
   
 
     const [request, setRequest] = useState('default');
@@ -12,12 +13,19 @@ export default function RequestPopup({ show, handleClose, id }) {
         console.log((e.target.value));
         //TODO save the request
     }
+    const userId = 0;
     const onSaveRequest = () => {
         //TODO axios post to list of request
         console.log("save change");
+
+        const requestBody ={
+            userId:userId,
+            propertyId : id
+        }
         console.log(id);
         setRequest('default');
-        // console.log(id);
+        // axsios post request.
+        axios.post(("http://localhost:8080/user/request", requestBody))
         //TODO change the button to cancel request
 
     }

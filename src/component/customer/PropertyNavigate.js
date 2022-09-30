@@ -3,7 +3,7 @@ import React, {createRef, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import FavoriteModal from "./FavoriteModal";
-import RequestPopup from "./RequestPopup";
+import RequestProperty from "./RequestProperty";
 
 export default function FavoriteList(props) {
   const [show, setShow] = useState(false);
@@ -48,7 +48,7 @@ export function Request(props) {
                 </p>
             </div>
 
-            <RequestPopup show={show} handleClose={handleClose} id={props.id} />
+            <RequestProperty show={show} handleClose={handleClose} id={props.id} />
         </div>
     );
 }

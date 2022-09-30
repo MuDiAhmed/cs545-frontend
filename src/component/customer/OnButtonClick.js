@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import FavoriteModal from "./FavoriteModal";
 import {Request} from "./PropertyNavigate";
-import RequestPopup from "./RequestPopup";
+import RequestProperty from "./RequestProperty";
 
 export default function OnClickFavoriteList() {
   //   return <div>Router to Favorite List </div>;
@@ -32,7 +32,7 @@ export function OnClickRequest() {
   const handleRequestClick = () => setRequest(true);
 
   return (
-      <RequestPopup
+      <RequestProperty
           // setShow={setShow}
           request={request}
           handleCloseRequest={handleCloseRequest}

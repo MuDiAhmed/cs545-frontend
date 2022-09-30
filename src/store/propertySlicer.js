@@ -3,7 +3,7 @@ import { Action } from "@remix-run/router";
 import axios from "axios";
 import {useParams} from "react-router-dom";
 
-export const feachAllProduct = createAsyncThunk(
+export const fetchAllProduct = createAsyncThunk(
   "property/fetchAll",
   async () => {
     //   const result = await axios.get("http://localhost:8080/products");
@@ -48,7 +48,7 @@ export const feachAllProduct = createAsyncThunk(
   }
 );
 
-export const feachProduct = createAsyncThunk("property/fetch", async (id) => {
+export const fetchProduct = createAsyncThunk("property/fetch", async (id) => {
   //   const result = await axios.get("http://localhost:8080/products/{id}");
   //   return result.data;
 
@@ -71,21 +71,21 @@ const propertySlice = createSlice({
   initialState: { products: [], status: " " },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(feachAllProduct.fulfilled, (state, action) => {
+    builder.addCase(fetchAllProduct.fulfilled, (state, action) => {
       console.log(action.payload);
       state.products = action.payload;
       state.status = "completed";
     });
-    builder.addCase(feachAllProduct.pending, (state) => {
+    builder.addCase(fetchAllProduct.pending, (state) => {
       state.status = "pending";
     });
 
-    builder.addCase(feachProduct.fulfilled, (state, action) => {
+    builder.addCase(fetchProduct.fulfilled, (state, action) => {
       console.log(action.payload);
       state.products = action.payload;
       state.status = "completed";
     });
-    builder.addCase(feachProduct.pending, (state) => {
+    builder.addCase(fetchProduct.pending, (state) => {
       state.status = "pending";
     });
   },

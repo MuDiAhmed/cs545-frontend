@@ -7,7 +7,7 @@ import OnClickFavoriteList, {
   OnClickRequest,
   OnClickClose,
 } from "./OnButtonClick";
-import {feachAllProduct, feachProduct} from "../../store/propertySlicer";
+import {fetchAllProduct, fetchProduct} from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
 import {Link, useParams} from "react-router-dom";
@@ -23,7 +23,7 @@ export default function PropertiesDetail() {
     console.log(id);
 
   useEffect(() => {
-    dispatch(feachProduct(id));
+    dispatch(fetchProduct(id));
   }, []);
 
 

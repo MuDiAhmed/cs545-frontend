@@ -4,7 +4,7 @@ import axios from "axios";
 export const addNewFavListSlicer = createAsyncThunk(
     "customer/favoriteList",
     async () => {
-        // await axios.post("http://localhost:8080/customer",{customerId, requestBody});
+        // await axios.put("user/favorite-list",{ requestBody});
     }
 
 )
@@ -25,6 +25,6 @@ const newFavoriteList = createSlice({
         builder.addCase(addNewFavListSlicer.pending,(state) => {
             state.status = "pending";
             console.log(state.status);
-        })
+        });
     }
 })
