@@ -1,7 +1,4 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-
-
-
 export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () => {
     // const { data } = await axios.get("properties/")
     const data = [
@@ -68,7 +65,6 @@ export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () =
 export const deleteCustomer = createAsyncThunk('', async (customerId) => {
     console.log(`customer id ${customerId} is deleted`);
 })
-
 
 const customersSlice = createSlice({
     name:"customer",
