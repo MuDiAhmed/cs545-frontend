@@ -21,12 +21,12 @@ export default function EditProperty(props) {
 
     useEffect(() => {
         dispatch(fetchAllOwnersProperty());
-    },[]);
+    }, []);
 
-    const ownerProperties =value.properties
+    const ownerProperties = value.properties
 
 
-    console.log('myyyy',ownerProperties);
+    console.log('myyyy', ownerProperties);
 
     return (
         <div>
@@ -39,7 +39,7 @@ export default function EditProperty(props) {
                 </p>
             </div>
             <div>{ownerProperties.map((property) =>
-                    <PropertyEditPage property = {property} show={show} handleClose={handleEdit} id={props.id}/>
+                    <PropertyEditPage property={property} show={show} handleClose={handleEdit} id={props.id}/>
                 // <PropertyDetailsPage property = {property} show={show} handleClose={handleClose} id={props.id} />
             )}</div>
 
@@ -47,41 +47,37 @@ export default function EditProperty(props) {
         </div>
     );
 }
-    export function MoreDetails(props) {
 
-        const [show, setShow] = useState(false);
-        const valeRef = createRef('default');
-        const handleClose = function () {
-            setShow(false);
-        } ;
+export function MoreDetails({property}) {
 
-        const value = useSelector((state) => state.ownersProperty);
-        const dispatch = useDispatch();
+    const [show, setShow] = useState(false);
+    const valeRef = createRef('default');
+    const handleClose = function () {
+        setShow(false);
+    };
+    const dispatch = useDispatch();
 
-        useEffect(() => {
-            dispatch(fetchAllOwnersProperty());
-        },[]);
+    useEffect(() => {
+        dispatch(fetchAllOwnersProperty());
+    }, []);
 
-        const ownerProperties =value.properties
+    console.log('my', property );
 
+    const handleFavListClick = () => setShow(true);
 
-        console.log('my',ownerProperties);
-
-        const handleFavListClick = () => setShow(true);
-
-        return (
+    return (
+        <div>
             <div>
-                <div>
-                    <p>
-                        <Button style={{padding: "9px", margin: "20px"}} variant="primary" onClick={handleFavListClick} >
-                            More Details</Button>
-                    </p>
-                </div>
-                <div>{ownerProperties.map((property) =>
-                    <PropertyDetailsPage property = {property} show={show} handleClose={handleClose} id={props.id} />
-                )}</div>
-
-
+                <p>
+                    <Button style={{padding: "9px", margin: "20px"}} variant="primary" onClick={handleFavListClick}>
+                        More Details</Button>
+                </p>
             </div>
-        );
+            <div>
+                <PropertyDetailsPage property={property} show={show} handleClose={handleClose} id={property.id}/>
+            </div>
+
+
+        </div>
+    );
 }
