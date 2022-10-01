@@ -1,5 +1,5 @@
 import News from "./CarouselNews";
-import UncontrolledExample from "./Slider";
+
 
 export default function TopPanel() {
   return (

@@ -52,7 +52,7 @@ export const fetchProduct = createAsyncThunk("property/fetch", async (id) => {
   //   const result = await axios.get("http://localhost:8080/products/{id}");
   //   return result.data;
 
-  // const {v} = useParams();
+
   
   const data = {
    

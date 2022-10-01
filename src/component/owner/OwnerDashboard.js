@@ -1,10 +1,9 @@
 import {useDispatch, useSelector} from "react-redux";
 import React, {useEffect} from "react";
-import {fetchCustomer} from "../../store/SingleCustomerSlicer";
+
 import {fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
 import OwnerSingleProperty from "./OwnerSingleProperty";
-import Button from "react-bootstrap/Button";
-import FavoriteModal from "../customer/FavoriteModal";
+
 import Card from 'react-bootstrap/Card';
 
 export default function OwnerDashboard() {
@@ -18,7 +17,7 @@ export default function OwnerDashboard() {
     },[]);
     const ownerProperties =value.properties
 
-    console.log(value.properties)
+
 
 
     return(
@@ -29,7 +28,7 @@ export default function OwnerDashboard() {
             <Card border="primary" style={{ width: '95rem', padding:"9px", marginLeft:"110px", fontWeight: "bold", fontSize: "20px",}}>
 
                 <Card.Body>
-                    {/*<Card.Title>Primary Card Title</Card.Title>*/}
+
                     <Card.Text>
                         <div style={{ width: '95rem', padding:"9px", marginLeft:"150px", fontWeight: "bold", fontSize: "20px",}}>
                             Search By :
@@ -47,9 +46,6 @@ export default function OwnerDashboard() {
                     </Card.Text>
                 </Card.Body>
             </Card>
-
-
-
             <div>{ownerProperties.map((property) =>
                 <OwnerSingleProperty property = {property}/>
             )}</div>

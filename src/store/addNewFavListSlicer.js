@@ -1,30 +1,30 @@
 import {createAsyncThunk, createSlice} from "@reduxjs/toolkit";
 import axios from "axios";
 
-export const addNewFavListSlicer = createAsyncThunk(
+export const saveNewFavList = createAsyncThunk(
     "customer/favoriteList",
-    async () => {
-        // await axios.put("user/favorite-list",{ requestBody});
+    async (payload) => {
+        // await axios.put("user/favorite-list", payload);
+
+        console.log(payload);
     }
 
 )
-// const addFavoriteListSlice = creat
 
-
-
-
-const newFavoriteList = createSlice({
+const addNewFavListSlicer = createSlice({
     name:"favoriteList",
     initialState:{favoriteList:[], status:""},
     reducers:{},
     extraReducers:(builder) => {
-        builder.addCase(addNewFavListSlicer.fulfilled,(state) =>{
+        builder.addCase(saveNewFavList.fulfilled,(state) =>{
             state.status = "completed";
             console.log(state.status);
         });
-        builder.addCase(addNewFavListSlicer.pending,(state) => {
+        builder.addCase(saveNewFavList.pending,(state) => {
             state.status = "pending";
             console.log(state.status);
         });
     }
-})
+});
+
+export default addNewFavListSlicer;

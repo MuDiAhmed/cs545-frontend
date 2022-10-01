@@ -5,9 +5,9 @@ import axios from "axios";
 import {useDispatch} from "react-redux";
 import {saveNewRequest} from "../../store/RequestSlicer";
 
-export default function RequestProperty({ show, handleClose, id }) {
-  
+export default function EditProperty({ show, handleClose, id }) {
 
+    console.log('conect');
     const [request, setRequest] = useState('default');
     const dispatch = useDispatch();
 

@@ -14,6 +14,7 @@ export const store = configureStore({
      propertyAdmin: propertyAdminReducer,
       singleCustomer : singlePropertyReducer,
       favorite :favoriteReducer,
-      ownersProperty:ownersPropertyReducer
+      ownersProperty:ownersPropertyReducer,
+      ownerSingleProperty:ownersPropertyReducer
   }
 });

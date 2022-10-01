@@ -2,12 +2,10 @@ import React, {useEffect, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchProduct} from "../../store/propertySlicer";
+
 import {fetchCustomer} from "../../store/SingleCustomerSlicer";
-import axios from "axios";
-import {hover} from "@testing-library/user-event/dist/hover";
-import {updateFavList} from "../../store/updateFavListSlicer";
-import {useParams} from "react-router-dom";
+
+import {saveNewFavList} from "../../store/addNewFavListSlicer";
 
 export default function FavoriteModal({ show, handleClose,id }) {
   const [favorit, setFavorit] = useState({
@@ -15,17 +13,12 @@ export default function FavoriteModal({ show, handleClose,id }) {
     name: "default",
   });
   const [newFavorite, setNewFavorite] = useState("default");
+  const [selectedFav, setSelectedFav] = useState();
 
   const favoriteList = useSelector((state) => state.singleCustomer);
   const favoriteListOfCus = favoriteList.customers;
 
 
-
-
-    //TODO display on Favorite list as a button
-
-
-  console.log( 'add ',favoriteList.customers);
 
 
   const dispatch = useDispatch();
@@ -35,45 +28,45 @@ export default function FavoriteModal({ show, handleClose,id }) {
   }, []);
 
   const onAddFavoriteList = (e) => {
-
-    setNewFavorite(e.target.value);
     const requestBody = {
-      comment:e.target.value
-    }
-    // TODO fix the request
-    axios.post(("api/properties/{id}/requests",
-        requestBody))
+      name: selectedFav ,
+      propertyId: id,
+    };
 
-
+    dispatch(saveNewFavList(requestBody));
   };
-  const onselectFav = (e) => {
-    const requestBody = {
-      name: e.target.name,
-      proporty: {
-        id:id
-      }
 
-    }
-    //TODO axios post request
-    console.log('favorite list selected');
-dispatch(updateFavList(requestBody))
+  const handleFavListFieldOnChange = (e) => {
+    setNewFavorite(e.target.value);
+  }
+
+  const onselectFav = (e) => {
+    setSelectedFav(e.target.value);
 
   };
 
   const addNewFavoriteList = (fav) => {
-    console.log("add");
-    // axios.post()
-    // TODO  post this new user
+
     setNewFavorite('default');
-    console.log(id);
-    // dispatch(addNewFavoriteList())
   };
+  const unCheck = () => {
+    let allRadioButtons = document.querySelectorAll('radioButtons');
+    console.log('radioButtons', allRadioButtons);
+    allRadioButtons.forEach(value => value.checked == false);
+  }
 
   const onSaveChanges = () => {
 
+    const requestBody = {
+      name: selectedFav || newFavorite,
+      propertyId: id,
+    };
 
- console.log("save change");
+    dispatch(saveNewFavList(requestBody));
+
+    unCheck();
   }
+
 
   return (
     <>
@@ -83,16 +76,18 @@ dispatch(updateFavList(requestBody))
         </Modal.Header>
         <Modal.Body>
 
+          <div onChange={onselectFav}>
+            {favoriteListOfCus.map((fav) =>
 
-            <ul>
-              {favoriteListOfCus.map((fav) =>
-                  <li onClick={() =>onselectFav(fav)}>{fav.name}</li>
+                <div className="radio">
+                  <label>
+                    <input type="radio" className='radioButtons' value={fav.name} checked={selectedFav === fav.name} name={fav.name}/>
+                    {fav.name}
+                  </label>
+                </div>
 
-              )}
-            </ul>
-
-
-
+            )}
+          </div>
         </Modal.Body>
         <Modal.Body>
           <form>
@@ -102,7 +97,7 @@ dispatch(updateFavList(requestBody))
                   <input
                     type="text"
                     value={newFavorite}
-                    onChange={onAddFavoriteList}
+                    onChange={handleFavListFieldOnChange}
                     style={{ width: "300px" }}
                   />
                 </div>

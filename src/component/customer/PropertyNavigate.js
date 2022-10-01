@@ -1,4 +1,3 @@
-import OnClickFavoriteList, { OnClickRequest } from "./OnButtonClick";
 import React, {createRef, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
@@ -7,7 +6,7 @@ import RequestProperty from "./RequestProperty";
 
 export default function FavoriteList(props) {
   const [show, setShow] = useState(false);
-//TODO how can I
+
   const handleClose = () => setShow(false);
 
   const handleFavListClick = () => setShow(true);

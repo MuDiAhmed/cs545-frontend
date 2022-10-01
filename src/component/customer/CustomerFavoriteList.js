@@ -13,8 +13,6 @@ export default function CustomerFavoriteList() {
                     <TopPanel/>
                     <br/>
                    <div className="justify-content-end"> <h3   > Your Favorite List</h3></div>
-
-                    {/*<h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "30px"}}>Your Favorite List</h3>*/}
                     <div>
                         <Favorites/>
                     </div>

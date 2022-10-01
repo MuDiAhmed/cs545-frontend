@@ -6,7 +6,7 @@ import {Request} from "./PropertyNavigate";
 import RequestProperty from "./RequestProperty";
 
 export default function OnClickFavoriteList() {
-  //   return <div>Router to Favorite List </div>;
+
   console.log("FavoriteList");
 
   const [show, setShow] = useState(true);
@@ -24,7 +24,7 @@ export default function OnClickFavoriteList() {
   );
 }
 export function OnClickRequest() {
-  //   return <div>Request for Rent/Buy </div>;
+
   console.log("Request");
   const [request, setRequest] = useState(true);
 

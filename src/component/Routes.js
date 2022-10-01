@@ -8,6 +8,7 @@ import AdminManageProperties from "./admin/AdminManageProperties";
 import PropertiesDetail from "./customer/PropertyDetails";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
 import OwnerDashboard from "./owner/OwnerDashboard";
+import OwnerProperty from "./owner/OwnerProperty";
 
 
 export default [
@@ -44,16 +45,21 @@ export default [
     },
     {
         // "/products",
-        path: "/products/:id",
+        path: "/property/:id",
         element: <PropertiesDetail />
     },
     {
-        path: "/favoritList",
+        path: "/favoriteList",
         element: <CustomerFavoriteList/>
     },
     {
         path: "/owners/:id",
         element: <OwnerDashboard/>
-    }
+    },
+    {
+
+        path: "owner/property/:id",
+        element: <OwnerProperty />
+    },
     
 ]

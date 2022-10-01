@@ -1,16 +1,39 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card';
+import {useDispatch, useSelector} from "react-redux";
+import {deleteOwnersProperty, fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
+
+import EditProperty, {MoreDetails} from "./OwnerPropertyNavigate";
+
 
 export default function OwnerSingleProperty (props) {
 
-    console.log(props);
+
     const value = props.property;
+
+
+    const dispatch = useDispatch();
+
+
+    const ownerProperties =value.properties
+
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+
+    const handleFavListClick = () => setShow(true);
+
+
 const onClickEdit = () => {
     console.log("edit");
+
+
 }
 const onClickDelete = () => {
         console.log("Delete");
+
+        dispatch(deleteOwnersProperty(value.id))
     }
     const onClickDetails = () => {
         console.log("Details");
@@ -83,19 +106,17 @@ const onClickDelete = () => {
                             <br/>
                         </div>
                         <div>
-                            <div style={{padding: "9px", textAlign:"left", marginLeft:"250px" }}>
-                                <div>
-                                    <Button style={{padding: "9px",  }} variant="primary" onClick={onClickEdit}>
-                                        Edit Property</Button>
+                            <div class="container text-center" >
+                                <div class="row justify-content-md-center">
 
-                                    <Button style={{padding: "9px"}} variant="primary" onClick={onClickDelete}>
-                                        Delete Property</Button>
+                                   <div class="col col-lg-2"  > <EditProperty id= {value.id}/></div>
 
-                                    <Button style={{padding: "9px"}} variant="primary" onClick={onClickDetails}>
-                                        More Details</Button>
+                                    <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}} variant="primary" onClick={onClickDelete}>
+                                        Delete Property</Button></div>
+
+                                    <div class="col col-lg-2"> <MoreDetails id= {value.id}/> </div>
 
                                 </div>
-
 
                             </div>
                         </div>
@@ -103,24 +124,8 @@ const onClickDelete = () => {
                 </Card.Body>
             </Card>
 
-
-
-
-
         </div>
     )
 }
 
 
-/*
-<Card border="primary" style={{ width: '18rem' }}>
-        <Card.Header>Header</Card.Header>
-        <Card.Body>
-          <Card.Title>Primary Card Title</Card.Title>
-          <Card.Text>
-            Some quick example text to build on the card title and make up the
-            bulk of the card's content.
-          </Card.Text>
-        </Card.Body>
-      </Card>
-* */
