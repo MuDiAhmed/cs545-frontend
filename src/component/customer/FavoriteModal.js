@@ -51,7 +51,7 @@ export default function FavoriteModal({ show, handleClose,id }) {
   };
   const unCheck = () => {
     let allRadioButtons = document.querySelectorAll('radioButtons');
-    console.log('radioButtons', allRadioButtons);
+    // console.log('radioButtons', allRadioButtons);
     allRadioButtons.forEach(value => value.checked == false);
   }
 

@@ -55,12 +55,12 @@ const onClickDelete = () => {
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms:{value.type}</div>
+                                        }}>Type:{value.type}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms:{value.location}</div>
+                                        }}>Location:{value.location}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",

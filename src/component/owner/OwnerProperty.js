@@ -7,7 +7,7 @@ import Carousel from "react-bootstrap/Carousel";
 export  default function OwnerProperty () {
 
     const value = useSelector((state) => state.ownerSingleProperty);
-    console.log('prop ',value.properties);
+    // console.log('prop ',value.properties);
     const property = value.properties;
     const dispatch = useDispatch();
     const {id} = useParams();

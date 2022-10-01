@@ -4,45 +4,41 @@ import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
 
-export default function PropertyDetailsPage({ show, handleClose,id }) {
+export default function PropertyDetailsPage({ property, show, handleClose,id }) {
 
-    const value = useSelector((state) => state.ownersProperty);
-    const dispatch = useDispatch();
-
-    useEffect(() => {
-        dispatch(fetchAllOwnersProperty());
-    },[]);
-    const ownerProperties =value.properties
-    console.log('my',ownerProperties);
+console.log("what ",property);
 
     return(
         <div>
             <>
                 <Modal show={show} onHide={handleClose}>
                     <Modal.Header closeButton>
-                        <Modal.Title>Favorite List</Modal.Title>
+                        <Modal.Title>Owners Property More Details</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
 
                     </Modal.Body>
                     <Modal.Body>
                         <form>
-                            <div class="container text-center">
-                                <div class="row">
-                                    <div class="col-sm-8">
-
-                                        hgujg
+                            <div >
+                                <div > Type: {property.type}</div>
+                                <div > Number of bedrooms: {property.numberOfRooms}</div>
+                                <div > Number of bathrooms: {property.numberOfBathrooms}</div>
+                                <div > Location: {property.location}</div>
+                                <div > Price: {property.price}</div>
+                                <div > View: {property.views}</div>
+                                <div > Construction Year: {property.constructionYear}</div>
+                                <div > Picture One: {property.picture}</div>
+                                <div > Picture two: {property.picture}</div>
 
                                     </div>
-                                    <div class="col-sm-4">
 
-                                    </div>
-                                </div>
-                            </div>
+
+
                         </form>
                     </Modal.Body>
                     <Modal.Footer>
-                        <Button variant="secondary" onClick={handleClose}>
+                        <Button variant="primary" onClick={handleClose}>
                             Close
                         </Button>
 

@@ -1,5 +1,6 @@
 import React from "react";
 import Property from "./Property";
+import Button from "react-bootstrap/Button";
 
 
 export default function Properties(props) {
@@ -7,6 +8,7 @@ export default function Properties(props) {
 const value = props.properties;
 
     //TODO Display single property
+    console.log(props);
 
     return(
         <div >
@@ -18,6 +20,7 @@ const value = props.properties;
                             {value.property.map((i) =>
                                 <Property property={i}/>
                             )}
+
                             <br/>
 
                         </div>
