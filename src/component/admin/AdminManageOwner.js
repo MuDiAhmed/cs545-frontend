@@ -60,7 +60,6 @@ function AdminManageOwner() {
                                         {
                       <td>{item.address}</td>
                     }
-
                      {
                       <td><Button variant="danger" onClick={()=>deleteOwnerById(i)}>Delete Owner</Button>{' '}</td>
                     }

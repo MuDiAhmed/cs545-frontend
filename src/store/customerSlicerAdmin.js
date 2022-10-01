@@ -62,9 +62,7 @@ export const fetchAllCustomer = createAsyncThunk("customer/fetchAll", async () =
           address : 827129992
       }];
     return data;
-
 });
-
 
 
 export const deleteCustomer = createAsyncThunk('', async (customerId) => {

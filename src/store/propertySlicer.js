@@ -20,9 +20,11 @@ export const feachAllProduct = createAsyncThunk(
   }
 );
 
-export const feachProduct = createAsyncThunk("property/fetch", async () => {
-  //   const result = await axios.get("http://localhost:8080/products");
-  //   return result.data;
+
+
+export const feachProduct = createAsyncThunk("property/5", async () => {
+    // const result = await axios.post("http://localhost:8080/products");
+    // return result.data;
   const data = {
    
     price: 22000,
