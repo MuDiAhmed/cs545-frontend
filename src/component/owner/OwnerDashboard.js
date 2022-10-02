@@ -29,10 +29,6 @@ export default function OwnerDashboard() {
 
         
 
-
-
-    
-
     return(
         <div>
             <div> <h3> Owner Dashboard </h3> </div>

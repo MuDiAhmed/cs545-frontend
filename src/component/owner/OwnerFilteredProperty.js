@@ -14,7 +14,7 @@ export default function OwnerFilteredProperty (props) {
     const value = useSelector((state) => state.ownerSingleProperty);
     console.log(value);
     const propertyArray = value.properties;
-    console.log('id is ',propertyArray[0].id);
+    console.log('id is ',   [0].id);
 
 
     const param = useParams()
@@ -101,7 +101,7 @@ export default function OwnerFilteredProperty (props) {
                                     <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}} variant="primary">
                                         Delete Property</Button></div>
 
-                                    <div class="col col-lg-2"> <MoreDetails id= {value.id}/> </div>
+                                    {/* <div class="col col-lg-2"> <MoreDetails id= {value.id}/> </div> */}
 
                                 </div>
 

@@ -26,7 +26,7 @@ export default function EditProperty(props) {
     const ownerProperties = value.properties
 
 
-    console.log('myyyy', ownerProperties);
+    console.log('myyyy', ownerProperties[0]);
 
     return (
         <div>
