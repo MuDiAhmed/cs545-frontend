@@ -10,8 +10,11 @@ function AdminPassReset() {
     setAdminEmail(event.target.value)
   }
 
+ 
+
   function getAdminEmail(event){
     event.preventDefault();
+    //Dispatch(recieveAdminEmail)
     console.log(adminEmail)
   }
 
