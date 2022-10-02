@@ -6,7 +6,7 @@ import {fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
 
 export default function PropertyDetailsPage({ property, show, handleClose,id }) {
 
-console.log("what ",property);
+// console.log("what ",property);
 
     return(
         <div>
