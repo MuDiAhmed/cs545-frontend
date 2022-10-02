@@ -3,20 +3,23 @@ import { useState,useEffect } from "react";
 import { Row, Col, Container, Form, Button, Image } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 
- 
+ import { useDispatch } from "react-redux";
 import propertyDetails from "../../img";
+import { filterProperty } from "../../store/propertySlicer";
+import PropertyCard from "../cards/PropertyCard";
+//import data from "../../data.json"
+import myJson from "../../data.json" 
+
 
 export default function Home() {
   const [filterData, setFilterData] = useState({});
+  const [data, setData] = useState([]);
+  const dispatch=useDispatch();
 
   useEffect(()=>{
 
-    const fetchData= async ()=>{
-
-    
-
-
-    }
+   const dat=myJson["properties"].allPropertiesWithImg;
+    setData(dat)
 
 
 
@@ -25,8 +28,12 @@ export default function Home() {
   const onSubmit = data => {
      
     setFilterData(data)
-    
+   
+
+    dispatch(filterProperty(data))
   };
+
+  
 
   return (
     <Container>
@@ -41,17 +48,17 @@ export default function Home() {
           <Container>
           {
 
-            filterData.length>0 ? <h1>results found</h1> :   <Row>
-            {propertyDetails.map((property) => {
+            filterData.length>0 ? <h1>results found</h1> :   <div style={{display:"flex", width:"100%",flexWrap:"wrap"}}>
+            {data.map((property) => {
               return (
-                <Col md={4} style={{ border: "" }}>
-                  <Image fluid src={property.image}></Image>
-                  <p>{property.location}</p>
-                  <p>{property.price}</p>
-                </Col>
+              
+
+                 <PropertyCard property={property} />
+                
+                
               );
             })}
-          </Row>
+          </div>
 
 
           }
@@ -105,20 +112,21 @@ export default function Home() {
                   </Col>
                 </Row>
               </Form.Group>
-              <Button variant="primary" type="submit">
-                Submit
-              </Button>
+              <div style={{width:"100%",display:"flex",justifyContent:"center" ,marginLeft:"35px"}}>
+              <Button variant="primary" type="submit" >
+              Submit
+            </Button>
+              </div>
+        
             </form>
 
-            <div className="position-fixed" style={{ margin: 5 }}>
+            <div className="position-fixed" style={{ margin:"10px" ,border:"1px solid gray",borderRadius:"10px" ,padding:"10px",marginTop:"100px"}}>
               <div style={{ padding: 7 }}>
-                <h3>About Us</h3>
-                <p>
+                <h3 style={{color:"gray"}}>About <span style={{color:"orange"}}>Us</span> </h3>
+                <p style={{lineHeight:"25px",fontSize:"13px"}}>
                   {" "}
-                  Line 3:8: 'Row' is defined but never used no-unused-vars Line
-                  5:8: 'AdminDashBoard' is defined but never used no-unused-vars
-                  Line 6:8: 'AdminPassResButton' is defined but never used
-                  no-unused-vars src/store/propertySlicer.js
+                  As the most-visited real estate website in the United States, Zillow and its affiliates offer customers an on-demand experience for selling, buying, renting and financing with transparency and nearly seamless end-to-end service. Zillow Home Loans, our affiliate
+                   lender, provides our customers with an easy option to get pre-approved and secure financing for their next home purchase.
                 </p>
               </div>
             </div>

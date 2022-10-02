@@ -2,8 +2,10 @@ import { current } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { Row, Col, Container, Form, Button, Image } from "react-bootstrap";
 import { useForm } from "react-hook-form";
-
+import { useDispatch } from "react-redux";
+import { registerProperty } from "../../store/propertySlicer";
 const Addproperty = () => {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     propertyType: "",
     numberOfBedrooms: "",
@@ -20,7 +22,7 @@ const Addproperty = () => {
 
   const { register, handleSubmit, watch, formState: { errors } } = useForm();
   const onSubmit = data => {
-     
+  
     const dataToPost= {
       propertyType: data.propertyType,
       numberOfBedrooms: data.numberOfBedrooms,
@@ -34,16 +36,13 @@ const Addproperty = () => {
         zipCode: data.zipCode,
       }
     }
-     console.log(dataToPost)
+
+    dispatch(registerProperty(dataToPost))
+    
     
   };
 
-  const [address, setAddressData] = useState({
-    state: "",
-    city: "",
-    street: "",
-    zipCode: "",
-  });
+  
 
   // const handleTextChange = (e) => {
   //   e.preventDefault();
