@@ -9,6 +9,7 @@ import PropertiesDetail from "./customer/PropertyDetails";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
 import OwnerDashboard from "./owner/OwnerDashboard";
 import OwnerProperty from "./owner/OwnerProperty";
+import OwnerFilteredProperty from "./owner/OwnerFilteredProperty";
 
 
 export default [
@@ -35,7 +36,10 @@ export default [
             {
                 path:"properties",
                 element: <AdminManageProperties />
-            }]
+            }
+
+
+        ]
 
 
     },
@@ -53,7 +57,7 @@ export default [
         element: <CustomerFavoriteList/>
     },
     {
-        path: "/owners/:id",
+        path: "/owners/:id/",
         element: <OwnerDashboard/>
     },
     {
@@ -61,5 +65,9 @@ export default [
         path: "owner/property/:id",
         element: <OwnerProperty />
     },
+    {
+        path: "owners/:id/:id",
+        element: <OwnerFilteredProperty />
+    }
     
 ]

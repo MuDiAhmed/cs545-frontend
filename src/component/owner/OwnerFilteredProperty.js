@@ -1,46 +1,34 @@
-import React, {useEffect, useState,useNavigate} from "react";
+import React, {useEffect, useState} from "react";
 import Button from "react-bootstrap/Button";
 import Card from 'react-bootstrap/Card';
 import {useDispatch, useSelector} from "react-redux";
+import {useParams} from 'react-router-dom'
 import {deleteOwnersProperty, fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
 
 import EditProperty, {MoreDetails} from "./OwnerPropertyNavigate";
 
 
-export default function OwnerSingleProperty(props) {
+export default function OwnerFilteredProperty (props) {
 
 
-
-    const value = props.property;
-
-    const dispatch = useDispatch();
-
-
-    const ownerProperties = value.properties
-
-    const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-
-    const handleFavListClick = () => setShow(true);
+    const value = useSelector((state) => state.ownerSingleProperty);
+    console.log(value);
+    const propertyArray = value.properties;
+    console.log('id is ',propertyArray[0].id);
 
 
-    const onClickEdit = () => {
-        console.log("edit");
+    const param = useParams()
+    console.log("parameter is" , param.id)
+    const filterById =  propertyArray.filter((property)=>property.id == param.id)
+    console.log("Hello Done", filterById[0])
 
 
-    }
-    const onClickDelete = () => {
-        console.log("Delete");
+    return(
 
-        dispatch(deleteOwnersProperty(value.id))
-    }
-    const onClickDetails = () => {
-        console.log("Details");
-    }
-    return (
-        <div>
-            <Card border="primary" style={{width: '95rem', padding: "9px", marginLeft: "110px"}}>
+        <div >
+            <div> <h2> Filterd Result </h2> </div>
+            <h3> You have filterd the property with Id # {filterById[0].id}</h3>
+            <Card border="primary" style={{ width: '95rem', padding:"9px", marginLeft:"110px"}}>
 
                 <Card.Body>
                     {/*<Card.Title>Primary Card Title</Card.Title>*/}
@@ -51,31 +39,30 @@ export default function OwnerSingleProperty(props) {
                             <div className="container text-center">
                                 <div className="row">
                                     <div className="col">
+                                        <div style={{fontSize: "18px",
+                                            textAlign: "left",
+                                            fontWeight: "bold"
+                                        }}>NumberOfBathrooms:{filterById[0].type}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>Type:{value.type}</div>
+                                        }}>NumberOfBathrooms:{filterById[0].location}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>Location:{value.location}</div>
+                                        }}>NumberOfBathrooms:{filterById[0].numberOfBathrooms}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms:{value.numberOfBathrooms}</div>
+                                        }}>NumberOfBathrooms: {filterById[0].numberOfRooms}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms: {value.numberOfRooms}</div>
-                                        <div style={{
-                                            fontSize: "18px",
-                                            textAlign: "left",
-                                            fontWeight: "bold"
-                                        }}>Views: {value.views}</div>
+                                        }}>Views: {filterById[0].views}</div>
 
                                         <br/>
                                     </div>
@@ -85,14 +72,14 @@ export default function OwnerSingleProperty(props) {
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>Price {value.price}</div>
+                                        }}>Price {filterById[0].price}</div>
                                         <div style={{fontSize: "18px", textAlign: "left", fontWeight: "bold"}}>Size
-                                            : {value.size}</div>
+                                            : {filterById[0].size}</div>
                                     </div>
                                     <div className="col">
                                         <img
                                             className="img1"
-                                            src={value.picture}
+                                            src={filterById[0].picture}
                                             alt="Property1"
                                             width="450"
                                             height="250"
@@ -106,16 +93,15 @@ export default function OwnerSingleProperty(props) {
                             <br/>
                         </div>
                         <div>
-                            <div class="container text-center">
+                            <div class="container text-center" >
                                 <div class="row justify-content-md-center">
 
-                                    <div class="col col-lg-2"><EditProperty id={value.id}/></div>
+                                   <div class="col col-lg-2"  > <EditProperty id= {value.id}/></div>
 
-                                    <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}}
-                                                                     variant="primary" onClick={onClickDelete}>
+                                    <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}} variant="primary">
                                         Delete Property</Button></div>
 
-                                    <div class="col col-lg-2"><MoreDetails property={value}/></div>
+                                    <div class="col col-lg-2"> <MoreDetails id= {value.id}/> </div>
 
                                 </div>
 
