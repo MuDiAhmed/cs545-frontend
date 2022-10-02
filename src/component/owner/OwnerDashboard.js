@@ -1,8 +1,10 @@
 import {useDispatch, useSelector} from "react-redux";
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
+import { Navigate, Route,Routes,useNavigate } from 'react-router-dom'
 
 import {fetchAllOwnersProperty} from "../../store/ownerPropertySlicer";
 import OwnerSingleProperty from "./OwnerSingleProperty";
+import OwnerFilteredProperty from "./OwnerFilteredProperty";
 
 import Card from 'react-bootstrap/Card';
 
@@ -18,7 +20,18 @@ export default function OwnerDashboard() {
     const ownerProperties =value.properties
 
 
+    const [searchValue, setSearchValue] = useState(0)
+    const navigate = useNavigate()
+    const getFormData = (id)=>{
+        navigate(`/owners/1/${searchValue}`)
+        console.log("Navigation Successful")
+    }
 
+        
+
+
+
+    
 
     return(
         <div>
@@ -37,11 +50,8 @@ export default function OwnerDashboard() {
                                 <option> name</option>
                                 <option> location</option>
                             </select>
-                            <input
-                                type="text"
-
-                                style={{ width: "300px" }}
-                            />
+                            <input type="text" style={{ width: "300px" }} onChange={(e)=>setSearchValue(e.target.value)}/>
+                           <button onClick={()=>getFormData(searchValue)}>Search</button> 
                         </div>
                     </Card.Text>
                 </Card.Body>
