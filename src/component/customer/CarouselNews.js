@@ -8,7 +8,7 @@ function News() {
           className="d-block w-100"
           src="https://thepetridish.my/wp-content/uploads/2019/06/blue-sky.jpg"
           alt="First slide"
-          width="420" height="170"
+          width="750" height="170"
           class="opacity-25"
         />
         <Carousel.Caption>
@@ -21,7 +21,7 @@ function News() {
           className="d-block w-100"
           src="https://thepetridish.my/wp-content/uploads/2019/06/blue-sky.jpg"
           alt="Second slide"
-          width="420" height="170"
+          width="750" height="170"
           class="opacity-25"
         />
 
@@ -35,7 +35,7 @@ function News() {
           className="d-block w-100"
           src="https://thepetridish.my/wp-content/uploads/2019/06/blue-sky.jpg"
           alt="Third slide"
-          width="420" height="170"
+          width="750" height="170"
           class="opacity-25"
         />
 

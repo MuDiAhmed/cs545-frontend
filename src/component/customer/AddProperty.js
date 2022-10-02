@@ -1,51 +1,77 @@
 import { current } from "@reduxjs/toolkit";
 import { useState } from "react";
 import { Row, Col, Container, Form, Button, Image } from "react-bootstrap";
-
+import { useForm } from "react-hook-form";
+import { useDispatch } from "react-redux";
+import { registerProperty } from "../../store/propertySlicer";
 const Addproperty = () => {
+  const dispatch = useDispatch();
   const [formData, setFormData] = useState({
     propertyType: "",
     numberOfBedrooms: "",
     dateOfConstraction: "",
     size: "",
     photo: [],
-  });
-
-  const [address, setAddressData] = useState({
-    state: "",
-    city: "",
-    street: "",
-    zipCode: "",
-  });
-
-  const handleTextChange = (e) => {
-    e.preventDefault();
-    const currentValue = { [e.target.name]: e.target.value };
-
-    if (e.target.name.includes("location")) {
-      setFormData({ address: { ...formData.address, ...currentValue } });
-    } else {
-      setFormData({ ...formData, ...currentValue });
+    address:{
+      state: "",
+      city: "",
+      street: "",
+      zipCode: "",
     }
+  });
+
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit = data => {
+  
+    const dataToPost= {
+      propertyType: data.propertyType,
+      numberOfBedrooms: data.numberOfBedrooms,
+      dateOfConstraction: data.dateOfConstraction,
+      size: data.size,
+      photo: [],
+      address:{
+        state: data.state,
+        city: data.city,
+        street: data.street,
+        zipCode: data.zipCode,
+      }
+    }
+
+    dispatch(registerProperty(dataToPost))
+    
+    
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  
 
-    console.log({ formData });
-    console.log("submit button clicked");
+  // const handleTextChange = (e) => {
+  //   e.preventDefault();
+  //   const currentValue = { [e.target.name]: e.target.value };
 
-    const payload = {
-      ...formData,
-      location: address,
-    };
-  };
+  //   if (e.target.name.includes("location")) {
+  //     setFormData({ address: { ...formData.address, ...currentValue } });
+  //   } else {
+  //     setFormData({ ...formData, ...currentValue });
+  //   }
+  // };
+
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+  //   console.log({ formData });
+  //   console.log("submit button clicked");
+
+  //   const payload = {
+  //     ...formData,
+  //     location: address,
+  //   };
+  // };
 
   return (
     <div>
       <container>
         <h2>Register new Property</h2>
-        <Form style={{ padding: 12 }}>
+        <Form style={{ padding: 12 }} onSubmit={handleSubmit(onSubmit)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Row>
               <Col md={3}>
@@ -55,8 +81,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="text"
                   placeholder="property type"
-                  name="propertyType"
-                  onChange={handleTextChange}
+                  {...register("propertyType")}
                 />
               </Col>
             </Row>
@@ -72,8 +97,8 @@ const Addproperty = () => {
                   type="number"
                   min="0"
                   placeholder="3"
-                  name="numberOfBedrooms"
-                  onChange={handleTextChange}
+                  {...register("numberOfBedrooms")}
+        
                 />
               </Col>
             </Row>
@@ -87,8 +112,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="date"
                   placeholder="date"
-                  name="dateOfConstraction"
-                  onChange={handleTextChange}
+                  {...register("dateOfConstraction")}
                 />
               </Col>
             </Row>
@@ -103,8 +127,7 @@ const Addproperty = () => {
                   type="number"
                   min="0"
                   placeholder="size"
-                  name="size"
-                  onChange={handleTextChange}
+                  {...register("size")}
                 />
               </Col>
             </Row>
@@ -119,8 +142,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="text"
                   placeholder="state"
-                  name="location.state"
-                  onChange={handleTextChange}
+                  {...register("state")}
                 />
               </Col>
             </Row>
@@ -134,8 +156,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="text"
                   placeholder="NewYork"
-                  name="location.city"
-                  onChange={handleTextChange}
+                  {...register("city")}
                 />
               </Col>
             </Row>
@@ -149,8 +170,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="text"
                   placeholder="e.g 1000 N 4th st"
-                  name="location.street"
-                  onChange={handleTextChange}
+                  {...register("street")}
                 />
               </Col>
             </Row>
@@ -164,8 +184,7 @@ const Addproperty = () => {
                 <Form.Control
                   type="text"
                   placeholder="e.g 52557"
-                  name="location.zipcode"
-                  onChange={handleTextChange}
+                  {...register("zipCode")}
                 />
               </Col>
             </Row>
@@ -180,7 +199,7 @@ const Addproperty = () => {
             />
           </div>
 
-          <Button variant="primary" type="submit" onClick={handleSubmit}>
+          <Button variant="primary" type="submit" >
             Submit
           </Button>
         </Form>

@@ -2,43 +2,81 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5264802c-4a13-4947-8e5e-46ddcca46258" name="Changes" comment="Sign in &amp; Sign out behavior">
-      <change afterPath="$PROJECT_DIR$/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/admin/AdminManageCustomer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/admin/AdminManageOwner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/admin/AdminManageProperties.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/AddProperty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/CarouselNews.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/CustomerFavoriteList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/FavoriteList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/FavoriteListTopPanel.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/component/customer/SingleProperty.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/ownerSlicer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/propertySlicerAdmin.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/class-diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/SignUP/SignUp.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/SignUP/SignUpForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/admin/DashboardProperties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/admin/LeftPanel.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/cards/PropertyCard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/cards/propertycard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/FavoriteModal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/Favorits.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/Properties.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/Property.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/PropertyDetailDisplay.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/customer/RequestProperty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/EditProperty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/OwnerDashboard.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/OwnerFilteredProperty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/OwnerProperty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/OwnerPropertyNavigate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/OwnerSingleProperty.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/PropertyDetailsPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/owner/PropertyEditPage.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/shared/AdminHeaderMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/shared/CustomerHeaderMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/shared/OwnerHeaderMenu.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/shared/ResetPasswordLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/component/shared/ResetPasswordThroughEmailLink.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/RequestSlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/SingleCustomerSlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/addNewFavListSlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/editPropertySlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/favoritePropertySlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/ownerPropertySlicer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/store/updateFavListSlicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/Routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/admin/AdminDashBoard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminDashBoard.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/admin/AdminDashBoardCustomers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminDashBoardCustomers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/admin/AdminDashBoardProperties.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminDashBoardProperties.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/admin/AdminGraph.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminGraph.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/admin/AdminLeftPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminLeftPanel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/admin/AdminPassReset.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminPassReset.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/admin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/admin/AdminManageCustomer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminManageCustomer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/admin/AdminManageOwner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminManageOwner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/admin/AdminManageProperties.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/admin/AdminManageProperties.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/admin/AdminPassReset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/auth/LoginCallback.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/auth/LoginCallback.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/auth/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/auth/config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/AddProperty.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/AddProperty.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/CarouselNews.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/CarouselNews.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/CustomerFavoriteList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/CustomerFavoriteList.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/customer/Dashboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/Dashboard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/customer/Property.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/FavoriteList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/FavoriteListTopPanel.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/FavoriteListTopPanel.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/OnButtonClick.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/OnButtonClick.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/customer/PropertyDescription.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/PropertyDescription.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/customer/PropertyDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/PropertyDetails.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/PropertyImages.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/PropertyImages.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/PropertyNavigate.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/PropertyNavigate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/component/customer/SingleProperty.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/customer/Slider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/customer/Slider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/component/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/shared/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/shared/Footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/component/shared/Header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/component/shared/Header.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/img.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/img1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/data.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/data.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/customerSlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/customerSlicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/customerSlicerAdmin.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ownerSlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/ownerSlicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/ownerSlicerAdmin.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/propertySlicer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/propertySlicer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/propertySlicerAdmin.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/propertySlicerAdmin.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,18 +102,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/mudi/MuDi/Study/MIU/CS545/project/frontend/src/component/auth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/mudi/MuDi/Study/MIU/CS545/project/frontend/src/component/auth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/component/auth" />

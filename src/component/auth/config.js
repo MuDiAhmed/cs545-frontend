@@ -8,7 +8,8 @@ export const oidcConfig = {
     redirectUri: window.location.origin+"/login-callback",
     postLogoutRedirectUri:window.location.origin+"/logout-callback",
     responseType: 'code',
-    scope:"openid email profile"
+    scope:"roles openid email profile",
+    loadUserInfo: true
 };
 
 export const UserManger = initUserManager(oidcConfig);

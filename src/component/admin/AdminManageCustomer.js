@@ -1,14 +1,12 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllCustomer, deleteCustomer } from "../../store/customerSlicerAdmin";
-import React, { useEffect} from "react";
+import {deleteCustomer, fetchAllCustomer} from "../../store/customerSlicer";
+import React, { useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 
 function AdminManageCustomer() {
 
   const {customers,status} = useSelector((state) => state.customer);
-
- 
 
 
   const dispatch = useDispatch();
@@ -29,7 +27,7 @@ function AdminManageCustomer() {
 
   return (
     <div>
-      <h3 style={{backgroundColor: "#1872F0",textAlign: "left",padding:"9px",borderRadius: "5px",color:"white",fontSize: "20px"}}>Manage Customers</h3>
+      <h3 dir="ltr">Manage Customers</h3>
       <hr />
         <Table responsive="sm" size="sm">
         <thead>
@@ -47,7 +45,7 @@ function AdminManageCustomer() {
                 customers.map((item,i) =>(
                    <tr key={i}>
                                        {
-                      <td>{item.id}</td>
+                      <td>{i+1}</td>
                     }
                     {
                       <td>{item.name}</td>
@@ -61,7 +59,6 @@ function AdminManageCustomer() {
                                         {
                       <td>{item.address}</td>
                     }
-
                      {
                       <td><Button variant="danger" onClick={()=>deleteCustomerById(i)}>Delete Customer</Button>{' '}</td>
                     }

@@ -1,4 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import { Action } from "@remix-run/router";
+import axios from "axios";
 import MockData from "./../data.json";
 
 

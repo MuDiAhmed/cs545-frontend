@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllCustomer } from "./../../store/customerSlicerAdmin";
+import { fetchAllCustomer } from "./../../store/customerSlicer";
 import React, { useEffect } from "react";
 
 function AdminDashBoardCustomers() {

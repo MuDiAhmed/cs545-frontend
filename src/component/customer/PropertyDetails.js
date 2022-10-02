@@ -1,7 +1,5 @@
 import React, { useEffect } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-
-
 import { useDispatch, useSelector } from "react-redux";
 
 import UncontrolledExample from "./Slider";
@@ -9,9 +7,12 @@ import OnClickFavoriteList, {
   OnClickRequest,
   OnClickClose,
 } from "./OnButtonClick";
-import { feachProduct } from "../../store/propertySlicer";
+import {  fetchProperty,fetchAllProduct } from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
+import {Link, useParams} from "react-router-dom";
+import PropertyDetailDisplay from "./PropertyDetailDisplay";
+
 
 export default function PropertiesDetail() {
   const propertyState = useSelector((state) => state.property);
@@ -19,19 +20,27 @@ export default function PropertiesDetail() {
 
   const dispatch = useDispatch();
 
+    const {id} = useParams();
+    console.log(id);
+
   useEffect(() => {
-    dispatch(feachProduct());
+    dispatch(fetchProperty(id));
   }, []);
 
   return (
     <div>
-      <div class="  "  >
+      <div class="  " style={{display: 'flex',
+    alignItems: 'self-end',
+    flexDirection: 'column-reverse'
+}}  >
+  <Link to={"/dashboard"}>
         <button 
           type="button"
           class="btn-close "
           aria-label="Close"
           onClick={OnClickClose}
         ></button>
+        </Link>
       </div>
       
       <div class="container" style ={{minHeight: 100 + 'vh', marginTop:70+'px'}} >
@@ -46,12 +55,20 @@ export default function PropertiesDetail() {
             <PropertyDescription />
           </div>
           <div class="col-sm-4">
-            <FavoriteList />
-            <Request />
+            <FavoriteList id ={id} />
+            <Request id = {id}/>
+
           </div>
         </div>
+
       </div>
+          <div >
+           <div class="position-absolute top-100 start-50 translate-middle">
+               <  PropertyDetailDisplay/>
+           </div>
+          </div>
     </div>
+
     </div>
   );
 }

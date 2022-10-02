@@ -1,8 +1,7 @@
 import Admin from "./admin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
-import AdminPassReset from "./admin/AdminPassReset";
-import Addproperty from "./customer/AddProperty";
+import AddProperty from "./customer/AddProperty";
 import AdminManageCustomer from "./admin/AdminManageCustomer";
 import AdminManageOwner from "./admin/AdminManageOwner";
 import AdminManageProperties from "./admin/AdminManageProperties";
@@ -11,6 +10,9 @@ import LoginCallback from "./auth/LoginCallback";
 import Index from "./index";
 import LogoutCallback from "./auth/LogoutCallback";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
+import OwnerDashboard from "./owner/OwnerDashboard";
+import OwnerProperty from "./owner/OwnerProperty";
+import OwnerFilteredProperty from "./owner/OwnerFilteredProperty";
 
 export default [
     {
@@ -32,10 +34,6 @@ export default [
                     {
                         path: "dashboard",
                         element: <AdminDashBoard/>
-                    },
-                    {
-                        path: "profile",
-                        element: <AdminPassReset/>
                     },
                     {
                         path: "customers",
@@ -60,18 +58,33 @@ export default [
                 element: <PropertiesDetail/>
             },
             {
-                path: "/dashboard",
-                element: <Dashboard/>
-            },
-            {
                 path: '/property/add',
-                element: <Addproperty/>
+                element: <AddProperty/>
+            },
 
+            {
+                // "/products",
+                path: "/property/:id",
+                element: <PropertiesDetail />
             },
             {
                 path: "/favoriteList",
                 element: <CustomerFavoriteList/>
+            },
+            {
+                path: "/owners",
+                element: <OwnerDashboard/>
+            },
+            {
+
+                path: "owner/property/:id",
+                element: <OwnerProperty />
+            },
+            {
+                path: "owners/:id",
+                element: <OwnerFilteredProperty />
             }
         ]
+
     }
 ]

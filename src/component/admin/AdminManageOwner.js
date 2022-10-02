@@ -1,28 +1,23 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllOwner, deleteOwner } from "../../store/ownerSlicerAdmin";
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import Button from 'react-bootstrap/Button';
+import {deleteOwner, fetchAllOwner} from "../../store/ownerSlicer";
 
 function AdminManageOwner() {
 
-  const {owners,status} = useSelector((state) => state.owner);
-  console.log(owners);
-
-
+  const propertyState = useSelector((state) => state.owner);
   const dispatch = useDispatch();
 
   useEffect(() => {
 
-    dispatch(fetchAllOwner());
+      dispatch(fetchAllOwner());
 
-  }, [dispatch]);
+  }, [])
 
 
-
-  const deleteOwnerById = (index) => {
-    const idx = owners[index].id;
-    dispatch(deleteOwner(idx));
+  const deleteOwnerById = (id) => {
+    dispatch(deleteOwner(id));
   }
 
 
@@ -43,7 +38,7 @@ function AdminManageOwner() {
         <tbody>
 
            {
-                owners.map((item,i) =>(
+               propertyState.owners.map((item,i) =>(
                    <tr key={i}>
                                        {
                       <td>{item.id}</td>
@@ -61,7 +56,7 @@ function AdminManageOwner() {
                       <td>{item.address}</td>
                     }
                      {
-                      <td><Button variant="danger" onClick={()=>deleteOwnerById(i)}>Delete Owner</Button>{' '}</td>
+                      <td><Button variant="danger" onClick={()=>deleteOwnerById(item.id)}>Delete Owner</Button>{' '}</td>
                     }
 
                    </tr>
