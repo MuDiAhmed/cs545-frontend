@@ -120,13 +120,13 @@ export default function Home() {
         
             </form>
 
-            <div className="position-fixed" style={{ margin:"10px" ,border:"1px solid gray",borderRadius:"10px" ,padding:"10px",marginTop:"100px"}}>
+            <div className="position-fixed" style={{ margin:"10px" ,border:"1px solid gray",borderRadius:"10px" ,padding:"10px"}}>
               <div style={{ padding: 7 }}>
                 <h3 style={{color:"gray"}}>About <span style={{color:"orange"}}>Us</span> </h3>
                 <p style={{lineHeight:"25px",fontSize:"13px"}}>
                   {" "}
                   As the most-visited real estate website in the United States, Zillow and its affiliates offer customers an on-demand experience for selling, buying, renting and financing with transparency and nearly seamless end-to-end service. Zillow Home Loans, our affiliate
-                   lender, provides our customers with an easy option to get pre-approved and secure financing for their next home purchase.
+                   lender.
                 </p>
               </div>
             </div>
