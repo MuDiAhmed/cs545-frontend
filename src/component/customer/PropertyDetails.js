@@ -9,7 +9,7 @@ import OnClickFavoriteList, {
   OnClickRequest,
   OnClickClose,
 } from "./OnButtonClick";
-import { feachProduct } from "../../store/propertySlicer";
+import {  fetchProperty } from "../../store/propertySlicer";
 import FavoriteList, { Request } from "./PropertyNavigate";
 import PropertyDescription from "./PropertyDescription";
 
@@ -20,7 +20,7 @@ export default function PropertiesDetail() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(feachProduct());
+    dispatch(fetchProperty());
   }, []);
 
   return (
