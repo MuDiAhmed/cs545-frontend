@@ -102,9 +102,9 @@ export default function FavoriteModal({ show, handleClose,id }) {
                   />
                 </div>
                 <div class="col-sm-4">
-                  <Button variant="primary" onClick={onAddFavoriteList}>
-                    add
-                  </Button>
+                  {/*<Button variant="primary" onClick={onAddFavoriteList}>*/}
+                  {/*  add*/}
+                  {/*</Button>*/}
                 </div>
               </div>
             </div>
