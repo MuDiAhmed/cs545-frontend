@@ -21,9 +21,6 @@ function AdminLeftPanel() {
             <Nav.Item>
               <Nav.Link eventKey="owners" href="owners">Manage Owners</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="profile" href="profile">Edit Profile</Nav.Link>
-            </Nav.Item>
           </Nav>
       </Row>
     </Tab.Container>

@@ -2,6 +2,7 @@
   "properties": {
     "allPropertiesWithImg": [
       {
+        "id": 1,
         "image": "https://images.unsplash.com/photo-1628745277862-bc0b2d68c50c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80",
         "price": 138.58,
         "numberOfRoom": 3,
@@ -14,6 +15,7 @@
         }
       },
       {
+        "id": 2,
         "image": "https://images.unsplash.com/photo-1570129477492-45c003edd2be?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
         "price": 567.58,
         "numberOfRoom": 1,
@@ -26,6 +28,7 @@
         }
       },
       {
+        "id": 3,
         "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/brewster-mcleod-architects-1486154143.jpg?crop=1.00xw:1.00xh;0,0&resize=980:*",
         "price": 876.1,
         "numberOfRoom": 5,
@@ -38,6 +41,7 @@
         }
       },
       {
+        "id": 4,
         "image": "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/fireplace-9-1573505526.jpg?crop=1.00xw:0.751xh;0.00160xw,0.0791xh&resize=980:*",
         "price": 987.432,
         "numberOfRoom": 2,
@@ -50,6 +54,7 @@
         }
       },
       {
+        "id": 5,
         "image": "https://hips.hearstapps.com/hmg-prod/images/laura-gonzalez-03-1663594324.jpg?crop=1.00xw:0.751xh;0,0.115xh&resize=1120:*",
         "price": 989.2,
         "numberOfRoom": 4,

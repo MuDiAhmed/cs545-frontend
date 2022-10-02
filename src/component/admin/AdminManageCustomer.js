@@ -1,6 +1,6 @@
 import Table from 'react-bootstrap/Table';
 import { useDispatch, useSelector } from "react-redux";
-import { fetchAllCustomer } from "../../store/customerSlicer";
+import {deleteCustomer, fetchAllCustomer} from "../../store/customerSlicer";
 import React, { useEffect } from "react";
 import Button from 'react-bootstrap/Button';
 
@@ -15,7 +15,14 @@ function AdminManageCustomer() {
 
     dispatch(fetchAllCustomer());
 
-  }, []);
+  }, [dispatch]);
+
+
+
+  const deleteCustomerById = (index) => {
+    const idx = customers[index].id; 
+    dispatch(deleteCustomer(idx));
+    }
 
 
   return (
@@ -53,10 +60,7 @@ function AdminManageCustomer() {
                       <td>{item.address}</td>
                     }
                      {
-                      <td><Button variant="primary">Edit Customer</Button>{' '}</td>
-                    }
-                     {
-                      <td><Button variant="danger">Delete Customer</Button>{' '}</td>
+                      <td><Button variant="danger" onClick={()=>deleteCustomerById(i)}>Delete Customer</Button>{' '}</td>
                     }
                     
                    </tr>

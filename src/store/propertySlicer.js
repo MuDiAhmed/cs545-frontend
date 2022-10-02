@@ -48,6 +48,7 @@ export const fetchAllProperty = createAsyncThunk(
   }
 );
 
+
 //find property by id
 export const fetchProperty= createAsyncThunk("property/fetch", async (id) => {
   //   const result = await axios.get(`http://localhost:8080/products/:{id}`);
@@ -108,7 +109,6 @@ const propertySlice = createSlice({
     builder.addCase(fetchAllProperty.pending, (state) => {
       state.status = "pending";
     });
-
     builder.addCase(fetchProperty.fulfilled, (state, action) => {
       console.log(action.payload);
       state.products = action.payload;

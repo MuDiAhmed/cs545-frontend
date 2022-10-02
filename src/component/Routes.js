@@ -1,7 +1,6 @@
 import Admin from "./admin";
 import AdminDashBoard from "./admin/AdminDashBoard";
 import Dashboard from "./customer/Dashboard"
-import AdminPassReset from "./admin/AdminPassReset";
 import AddProperty from "./customer/AddProperty";
 import AdminManageCustomer from "./admin/AdminManageCustomer";
 import AdminManageOwner from "./admin/AdminManageOwner";
@@ -35,10 +34,6 @@ export default [
                     {
                         path: "dashboard",
                         element: <AdminDashBoard/>
-                    },
-                    {
-                        path: "profile",
-                        element: <AdminPassReset/>
                     },
                     {
                         path: "customers",

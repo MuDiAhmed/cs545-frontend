@@ -3,7 +3,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Button from 'react-bootstrap/Button';
 import { useDispatch, useSelector } from "react-redux";
-import { feachAllPropertyWithImage } from "./../../store/propertySlicerAdmin";
+import {deleteProperty, feachAllPropertyWithImage} from "./../../store/propertySlicerAdmin";
 import React, { useEffect } from "react";
 
 function AdminManageProperties() {
@@ -18,7 +18,11 @@ function AdminManageProperties() {
 
     dispatch(feachAllPropertyWithImage());
 
-  }, []);
+  }, [dispatch]);
+
+  const deletePropertyById = (id)=>{
+    dispatch(deleteProperty(id));
+  }
 
   return (
     <>
@@ -32,12 +36,12 @@ function AdminManageProperties() {
             <Card.Body>
               <Card.Title style={{fontSize:"22px", fontWeight:"bold"}}>${data.price}</Card.Title>
               <Card.Text style={{fontSize:"12px"}}>
-                <b>Number of Rooms: </b>{data.numberOfRoom} , <b>Year of Build: </b>{data.yearOfBuild}, <b>Size:</b> {data.size} <b>sqft</b>
+                Id: {data.id}<b>Number of Rooms: </b>{data.numberOfRoom} , <b>Year of Build: </b>{data.yearOfBuild}, <b>Size:</b> {data.size} <b>sqft</b>
               </Card.Text>
             </Card.Body>
           </Card>
           <br />
-          <Button variant="danger">Delete Property</Button>{' '}
+          <Button variant="danger" onClick={()=>deletePropertyById(data.id)}>Delete Property</Button>{' '}
         </Col>
       ))}
     </Row>

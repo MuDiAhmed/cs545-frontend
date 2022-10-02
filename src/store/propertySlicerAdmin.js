@@ -15,6 +15,10 @@ export const feachAllPropertyWithImage = createAsyncThunk("property/fetchAll", a
   }
 );
 
+export const deleteProperty = createAsyncThunk("", async(propertyId)=>{
+  console.log(`Property id: ${propertyId} has been removed.`)
+})
+
 
 const propertySlice = createSlice({
   name:"propertyAdmin",
