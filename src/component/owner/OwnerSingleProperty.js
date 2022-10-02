@@ -7,7 +7,7 @@ import {deleteOwnersProperty, fetchAllOwnersProperty} from "../../store/ownerPro
 import EditProperty, {MoreDetails} from "./OwnerPropertyNavigate";
 
 
-export default function OwnerSingleProperty (props) {
+export default function OwnerSingleProperty(props) {
 
 
 
@@ -16,7 +16,7 @@ export default function OwnerSingleProperty (props) {
     const dispatch = useDispatch();
 
 
-    const ownerProperties =value.properties
+    const ownerProperties = value.properties
 
     const [show, setShow] = useState(false);
 
@@ -25,12 +25,12 @@ export default function OwnerSingleProperty (props) {
     const handleFavListClick = () => setShow(true);
 
 
-const onClickEdit = () => {
-    console.log("edit");
+    const onClickEdit = () => {
+        console.log("edit");
 
 
-}
-const onClickDelete = () => {
+    }
+    const onClickDelete = () => {
         console.log("Delete");
 
         dispatch(deleteOwnersProperty(value.id))
@@ -38,9 +38,9 @@ const onClickDelete = () => {
     const onClickDetails = () => {
         console.log("Details");
     }
-    return(
-        <div >
-            <Card border="primary" style={{ width: '95rem', padding:"9px", marginLeft:"110px"}}>
+    return (
+        <div>
+            <Card border="primary" style={{width: '95rem', padding: "9px", marginLeft: "110px"}}>
 
                 <Card.Body>
                     {/*<Card.Title>Primary Card Title</Card.Title>*/}
@@ -55,12 +55,12 @@ const onClickDelete = () => {
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms:{value.type}</div>
+                                        }}>Type:{value.type}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
                                             fontWeight: "bold"
-                                        }}>NumberOfBathrooms:{value.location}</div>
+                                        }}>Location:{value.location}</div>
                                         <div style={{
                                             fontSize: "18px",
                                             textAlign: "left",
@@ -106,15 +106,16 @@ const onClickDelete = () => {
                             <br/>
                         </div>
                         <div>
-                            <div class="container text-center" >
+                            <div class="container text-center">
                                 <div class="row justify-content-md-center">
 
-                                   <div class="col col-lg-2"  > <EditProperty id= {value.id}/></div>
+                                    <div class="col col-lg-2"><EditProperty id={value.id}/></div>
 
-                                    <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}} variant="primary" onClick={onClickDelete}>
+                                    <div class="col-md-auto"><Button style={{padding: "9px", margin: "20px"}}
+                                                                     variant="primary" onClick={onClickDelete}>
                                         Delete Property</Button></div>
 
-                                    <div class="col col-lg-2"> <MoreDetails id= {value.id}/> </div>
+                                    <div class="col col-lg-2"><MoreDetails property={value}/></div>
 
                                 </div>
 

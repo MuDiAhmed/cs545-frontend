@@ -1,4 +1,5 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import {saveNewRequest} from "./RequestSlicer";
 
 
 
@@ -22,6 +23,7 @@ export const fetchAllOwnersProperty = createAsyncThunk(
                 views: 234,
                 size: 23333,
                 year: 2023,
+                constructionYear:2004
             },
             {
                 id:2,
@@ -35,6 +37,7 @@ export const fetchAllOwnersProperty = createAsyncThunk(
                 views: 234,
                 size: 23333,
                 year: 2023,
+                constructionYear:2004
             },
             {
                 id:3,
@@ -48,6 +51,7 @@ export const fetchAllOwnersProperty = createAsyncThunk(
                 views: 234,
                 size: 23333,
                 year: 2023,
+                constructionYear:2004
             },
             {
                 id:4,
@@ -61,6 +65,7 @@ export const fetchAllOwnersProperty = createAsyncThunk(
                 views: 234,
                 size: 23333,
                 year: 2023,
+            constructionYear:2004
             },
 
         ];
@@ -97,6 +102,7 @@ export const fetchOwnerProperty= createAsyncThunk("property/fetch", async (id) =
             views: 234,
             size: 23333,
             year: 2023,
+            constructionYear:2004
         }
     return data;
 });
@@ -131,6 +137,7 @@ const ownerPropertySlice = createSlice({
             state.status = "pending";
             console.log(state.status);
         });
+
 
     },
 });

@@ -1,10 +1,23 @@
 import React from "react";
+import Button from "react-bootstrap/Button";
+import {useDispatch, useSelector} from "react-redux";
+import {deleteFavProperty} from "../../store/favoritePropertySlicer";
 
 export default function Property(props) {
 
     const value = props.property;
 
+
     //TODO Display single property
+    const val = useSelector((state) => state.favorite);
+    const dispatch = useDispatch();
+    const deleteProperty = () => {
+        // dispatch(deleteFavProperty(value.id));
+
+        console.log("hhhha");
+        console.log('ppp',value);
+
+    }
 
     return(
         <div >
@@ -26,6 +39,7 @@ export default function Property(props) {
                     <div>numberOfBathrooms: {value.numberOfRooms}</div>
                     <div>Size : {value.size}</div>
                     <div>Views: {value.view}</div>
+                    <Button variant="primary" onClick={deleteProperty} >Delete</Button>
 
                     <br/>
                 </div>

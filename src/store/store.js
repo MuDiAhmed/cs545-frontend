@@ -5,6 +5,7 @@ import { reducer as propertyAdminReducer} from "./propertySlicerAdmin";
 import {reducer as singlePropertyReducer } from "./SingleCustomerSlicer";
 import {reducer as favoriteReducer } from "./favoritePropertySlicer";
 import {reducer as ownersPropertyReducer } from "./ownerPropertySlicer";
+import {reducer as editPropertyReducer } from "./editPropertySlicer";
 
 
 export const store = configureStore({
@@ -15,6 +16,7 @@ export const store = configureStore({
       singleCustomer : singlePropertyReducer,
       favorite :favoriteReducer,
       ownersProperty:ownersPropertyReducer,
-      ownerSingleProperty:ownersPropertyReducer
+      ownerSingleProperty:ownersPropertyReducer,
+      editProperty:editPropertyReducer
   }
 });
