@@ -11,6 +11,9 @@ import LoginCallback from "./auth/LoginCallback";
 import Index from "./index";
 import LogoutCallback from "./auth/LogoutCallback";
 import CustomerFavoriteList from "./customer/CustomerFavoriteList";
+import OwnerDashboard from "./owner/OwnerDashboard";
+import OwnerProperty from "./owner/OwnerProperty";
+import OwnerFilteredProperty from "./owner/OwnerFilteredProperty";
 
 export default [
     {
@@ -62,12 +65,31 @@ export default [
             {
                 path: '/property/add',
                 element: <AddProperty/>
+            },
 
+            {
+                // "/products",
+                path: "/property/:id",
+                element: <PropertiesDetail />
             },
             {
                 path: "/favoriteList",
                 element: <CustomerFavoriteList/>
+            },
+            {
+                path: "/owners",
+                element: <OwnerDashboard/>
+            },
+            {
+
+                path: "owner/property/:id",
+                element: <OwnerProperty />
+            },
+            {
+                path: "owners/:id",
+                element: <OwnerFilteredProperty />
             }
         ]
+
     }
 ]

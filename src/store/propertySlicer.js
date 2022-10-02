@@ -8,9 +8,35 @@ export const fetchAllProperty = createAsyncThunk(
   async () => {
     //   const result = await axios.get("http://localhost:8080/products");
     //   return result.data;
+    // id
     const data = [
       {
+        picture:"https://bobbyhadz.com/images/blog/react-prevent-multiple-button-clicks/thumbnail.webp",
         price: 22000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 232000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 652000,
+        numberOfRooms: 3,
+        numberOfBathrooms:2,
+        views: 234,
+        size: 23333,
+        year: 2023,
+      },
+      {
+        price: 5320690,
         numberOfRooms: 3,
         numberOfBathrooms:2,
         views: 234,
@@ -27,7 +53,7 @@ export const fetchProperty= createAsyncThunk("property/fetch", async (id) => {
   //   const result = await axios.get(`http://localhost:8080/products/:{id}`);
   //   return result.data;
   const data = {
-   
+
     price: 22000,
     numberOfRooms: 3,
     numberOfBathrooms:2,
@@ -38,12 +64,11 @@ export const fetchProperty= createAsyncThunk("property/fetch", async (id) => {
   return data;
 });
 
-///filter property 
+///filter property
 export const filterProperty= createAsyncThunk("property/filter", async (d) => {
-  
+
    // const result = await axios.get(`http://localhost:8080/products/?name=${d.name}&price=${d.price}&size=${d.size}&location=${d.location}`);
   //   return result.data;
-  console.log(d)
   const data = {
    
     price: 22000,
@@ -58,13 +83,13 @@ export const filterProperty= createAsyncThunk("property/filter", async (d) => {
 
 //post properrty
 export const registerProperty = createAsyncThunk("property/add", async (d) => {
-  
+
   console.log(d)
   // const result = await axios.post(`http://localhost:8080/products`,d);
 //   return result.data;
 const data = {
- 
-  
+
+
 };
 return data;
 });
